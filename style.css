@@ -432,7 +432,7 @@ footer p {
 }
 
 .portfolio-banner {
-    background-image: url('/static/img/banner/3.png');
+    background-image: url('/Home/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -441,7 +441,7 @@ footer p {
 }
 
 .footer-portfolio-banner {
-    background-image: url('/static/img/banner/3.png');
+    background-image: url('/Home/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: left;
