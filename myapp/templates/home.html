@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/css/style.css" rel="stylesheet"/>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/css/fontawesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="slider_area">
+        <div class="single_slider d-flex align-items-center slider_bg_1">
+            <div class="container">
+                        <div class="slider_text">
+                            <h3>Привет,</h3>
+                             <h3>   я Екатерина!</h3>
+                            <h4>Начинающий тестировщик.</h4>
+                        </div>
+                        <div class="navigation">
+    <a href="/">Главная</a> |
+    <a href="{% url 'myapp:about_me' %}">Обо мне</a> |
+    <a href="{% url 'myapp:portfolio' %}">Портфолио</a> |
+
+</div>
+                    </div>
+                    <div class="my_img d-none d-lg-block">
+                        <img src="/static/img/about/my_img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <div class="download_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="download_text">
+                        <h3>Начинающий мануальный тестировщик. </h3>
+                        <h4>Активно развиваю свои навыки. В перспективе хочу стать автоматизатором (Python).</h4>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="download_left">
+                        <h2>Опыт:</h2>
+                        <p>1.Компания: Sturtap</p>
+                        <p>Период работы: с августа 2024 по ноябрь 2024</p>
+                        <p>Должность: Стажер QA</p>
+                        <p>Обязанности: Тестирование мобильного приложения, чек-лист, тест-кейсы
+                        составление баг-репортов, регрессионное тестирование, тестирование нового функционала, тестирование API</p>
+                        </p>
+                        <p>2.Компания: CrowdTesting</p>
+                        <p>Период работы: с октября 2023 по март 2024</p>
+                        <p>Должность: Стажер QA</p>
+                        <p>Обязанности: Тестирование мобильного приложения платежной системы,
+                        составление баг-репортов</p>
+                        <p>Достижения: Активно попадала в топ. Ключевое достижение попасть в топ-1 и получить сертификат
+                            "Супертестировщика"</p>
+                        <h2>Мой стек: </h2>
+                        <h5>- Функциональное тестирование web-приложений </h5>
+                        <h5>- Тестирование API </h5>
+                        <h5>- Базовые навыки тестирования мобильного приложения </h5>
+                        <h5>- Ведение тестовой документации (чеклисты, тест-кейсы, тест- планы, баг-репорты) </h5>
+                        <h5>- Основы автоматизированного тестирования (Python) </h5>
+                        <h5>- Базовые навыки работы с базами данных (PostgreSQL) </h5>
+                        <h5>- Postman </h5>
+                        <h5>- GIT </h5>
+                        <h5>- Jira </h5>
+                        <h5>- Confluence </h5>
+                        </p>
+                        <h2>ОБРАЗОВАНИЕ: </h2>
+                        <h5>Воронежский государственный университет </h5>
+                        <h5>Факультет: Математический </h5>
+                        <h5>Специальность: Финансист </h5>
+                        <h5>Дата окончания: 2012 года </h5>
+                        </p>
+
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<div class="slider_area">-->
+<!--        &lt;!&ndash;  Ваш  контент  слайдера  ...  &ndash;&gt;-->
+<!--    </div>-->
+
+<!--    <div class="service_area portfolio-section">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-xl-12">-->
+<!--                    <div class="section_title mb-50">-->
+<!--                        <h3>Мои работы</h3>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_service text-center">-->
+<!--                        <a href="{% url 'myapp:portfolio' %}">-->
+<!--                        <div class="icon">-->
+<!--                            <img src="/static/img/svg_icon/1.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                                Портфолио-->
+<!--                        </h3>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6 about-section">  &lt;!&ndash;  Добавьте  класс  &ndash;&gt;-->
+<!--                    <div class="single_service text-center">-->
+<!--                        <a href="{% url 'myapp:about_me' %}">-->
+<!--                        <div class="icon">-->
+<!--                            <img src="/static/img/svg_icon/2.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                                Обо мне-->
+<!--                        </h3>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6 resume-section">-->
+<!--                    <div class="single_service text-center">-->
+<!--                        <div class="icon">-->
+<!--                            <img src="/static/img/svg_icon/3.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                                Резюме-->
+<!--                        </h3>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!-- gallery_area start  -->
+    <div class="gallery_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title mb-50">
+                    <h3>Мои сертификаты.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-10">
+                <div class="certificate-grid">
+                    <div class="certificate-item">
+                        <img src="/static/img/gallery/TGU.png" alt="TGU Certificate">
+                        <p>ТГУ</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="/static/img/gallery/Shift.png" alt="Shift Certificate">
+                        <p>ШИФТ Backend Python QA</p>
+                    </div>
+                    <!-- Добавьте еще три элемента certificate-item -->
+                    <div class="certificate-item">
+                        <img src="/static/img/gallery/supertester.png" alt="Супертестировщик">
+                        <p>Сертификат "Супертестировщик"</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="/static/img/gallery/top50.png" alt="Топ-50">
+                        <p>Сертификат "Топ-50"</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="/static/img/gallery/uchastnik.png" alt="Участник">
+                        <p>Сертификат "Участник"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="full-image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="full-image">
+</div>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const portfolioButton = document.querySelector('.btn-primary');
+            const aboutButton = document.querySelector('.btn-secondary');
+            const resumeButton = document.querySelector('.btn-success');
+
+            portfolioButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const portfolioSection = document.querySelector('.portfolio-section');
+                if (portfolioSection) {
+                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            aboutButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const aboutSection = document.querySelector('.about-section');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            resumeButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const resumeSection = document.querySelector('.resume-section');
+                if (resumeSection) {
+                  resumeSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        // Получаем все элементы с сертификатами
+const certificateItems = document.querySelectorAll('.certificate-item');
+
+// Получаем элементы модального окна
+const modal = document.getElementById("full-image-modal");
+const modalImg = document.getElementById("full-image");
+const span = document.getElementsByClassName("close")[0];
+function adjustModalSize() {
+  if (!modal || !modalImg) return;
+
+  const imgWidth = modalImg.naturalWidth;
+  const imgHeight = modalImg.naturalHeight;
+  const modalWidth = modal.offsetWidth; // Получаем ширину модального окна
+  const modalHeight = modal.offsetHeight; // Получаем высоту модального окна
+
+  if (imgWidth === 0 || imgHeight === 0) {
+    return; // Изображение еще не загрузилось
+  }
+
+  let scaleX = modalWidth / imgWidth;
+  let scaleY = modalHeight / imgHeight;
+  let scale = Math.min(scaleX, scaleY); // Выбираем меньший масштаб, чтобы изображение поместилось
+
+  modalImg.style.width = `${imgWidth * scale}px`;
+  modalImg.style.height = `${imgHeight * scale}px`;
+  modalImg.style.margin = '0 auto'; // Центрируем изображение
+}
+
+
+// Добавляем обработчик клика для каждого элемента
+certificateItems.forEach(item => {
+          item.addEventListener('click', () => {
+              modal.style.display = "block";
+              modalImg.src = item.querySelector('img').src;
+              modalImg.onload = adjustModalSize;
+          });
+      });
+
+
+// Закрываем модальное окно при клике на "x"
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Закрываем модальное окно при клике вне изображения
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+
+<footer class="footer-portfolio-banner">
+    <div class="footer-banner-inner">
+        <p>Контакты: <a href="mailto:your@email.com">tkatushka28@mail.ru</a></p>
+        <p>Телефон: +7 (951) 861-24-34</p>
+        <p><a href="tg://resolve?domain=kattger">Telegram: @kattger</a></p>
+        <p>&copy; 2024 Екатерина</p>
+    </div>
+</footer>
+
+</body>
+</html>
