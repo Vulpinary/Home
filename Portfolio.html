@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Заголовок сайта -->
+<header class="portfolio-banner">
+    <div class="portfolio-banner-inner">
+        <h1>Портфолио</h1>
+        <h2>Раздел, с моими работами</h2>
+    </div>
+     <nav class="navigation">
+        <a href="/">Главная</a> |
+        <a href="{% url 'myapp:about_me' %}">Обо мне</a> |
+        <a href="{% url 'myapp:portfolio' %}">Портфолио</a> |
+    </nav>
+
+</header>
+<!-- Контейнер содержимого -->
+    <div class="container">
+
+        <!-- Описание проекта -->
+        <div class="project-description">
+            <h2>Создание и тестирование API с использованием FastAPI</h2>
+            <p>Для демонстрации навыков автоматизированного тестирования API был создан личный проект: разработка и всестороннее тестирование API с использованием FastAPI. FastAPI был выбран за свою скорость, простоту и удобство в создании API.</p>
+            <p>Цель проекта — не только создание API, но и получение опыта как с точки зрения тестирования, так и разработки API. Такой подход позволяет понимать процесс разработки в целом, уметь определять потенциальные источники ошибок и предлагать решения для их исправления.</p>
+            <p>В рамках проекта созданы артефакты для эффективного тестирования, демонстрирующие этапы процесса тестирования. Из-за ограничений времени работодателя, в проект включена лишь часть информации.</p>
+            <p>Компоненты проекта:</p>
+            <ul>
+                <li><strong>FastAPI (Мой тестовый API):</strong> Разработанный API, являющийся объектом тестирования.</li>
+                <li><strong>Требования к продукту:</strong> Определение целей и функциональности API.</li>
+                <li><strong>Майнд-карта FastAPI:</strong> Визуальное представление структуры и взаимосвязей компонентов API.</li>
+                <li><strong>Чек-лист:</strong> Список проверок для обеспечения качества API.</li>
+                <li><strong>Тест-кейсы:</strong> Сценарии тестирования для проверки функций API.</li>
+                <li><strong>Баг-репорты:</strong> Описание ошибок и проблем в API.</li>
+                <li><strong>Отчет о тестировании и рекомендации:</strong> Результаты тестирования, анализ проблем и рекомендации.</li>
+                 <li><strong>Автотесты:</strong> Автоматизированные тесты для проверки API.</li>
+            </ul>
+            <p>Проект демонстрирует применение знаний в тестировании API.</p>
+        </div>
+        <!-- Контейнер для FastAPI -->
+<div class="collapsible-container">
+    <div class="collapsible-header" onclick="toggleCollapsible('fastapi')">
+        FastAPI (Мой тестовый API)
+        <i class="arrow down" id="fastapi-arrow"></i>
+    </div>
+    <div class="collapsible-content" id="fastapi">
+        <p>Созданный мной тестовый API, использованный для сбора портфолио. По ссылке <a href="https://vulpinary.github.io/Vulpy/#/">https://vulpinary.github.io/Vulpy/#/</a> находится демонстрация фрагментов этого API, но запросы не отправляются, так как GitHub передает только статические данные.</p>
+        <p>В рамках этого проекта я собирала:</p>
+        <ul>
+            <li>Майнд-карта: Основная структура проекта.</li>
+            <li>Требования: Документация с описанием функциональности, написанная для того, чтобы на их основе создать чек-лист и тест-кейсы. Тестирования самих требований не производилось, поэтому в них могут быть нелогичные или противоречащие данные. Это было сделано намеренно для демонстрации процесса разработки тестов на основе заданных требований.</li>
+            <li>Чек-лист: Список проверок для обеспечения качества.</li>
+            <li>Тест-кейсы: Набор сценариев для ручного тестирования.</li>
+            <li>Автотесты на Python: Автоматизированные тесты для проверки API.</li>
+        </ul>
+          <p>API включает в себя регистрацию и авторизацию продавцов, создание категорий продукции и другие функции.</p>
+    </div>
+</div>
+                       <!-- Контейнер для требований -->
+        <div class="collapsible-container">
+            <div class="collapsible-header" onclick="toggleCollapsible('requirements')">
+                Требования к продукту
+                <i class="arrow down" id="requirements-arrow"></i>
+            </div>
+            <div class="collapsible-content" id="requirements">
+                <ul class="requirements-list">
+                    <li>
+                        <h4>1. Регистрация продавца</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность зарегистрироваться в системе.</p>
+                        <ul>
+                           <li><strong>username:</strong> уникальное имя пользователя (строка, максимум 50 символов).</li>
+                            <li><strong>password:</strong> пароль (строка, минимум 8 символов, должен содержать нижний регистр, верхний регистр и цифры).</li>
+                           <li><strong>name:</strong> полное имя (строка, максимум 100 символов).</li>
+                            <li><strong>email:</strong> адрес электронной почты (строка, уникальная, максимум 100 символов).</li>
+                       </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение успешной регистрации или сообщение об ошибке «имя пользователя или адрес электронной почты уже заняты».</p>
+                    </li>
+                    <li>
+                        <h4>2. Авторизация продавца</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность войти в систему.</p>
+                        <ul>
+                            <li><strong>username:</strong> имя пользователя.</li>
+                            <li><strong>password:</strong> пароль.</li>
+                       </ul>
+                         <p><strong>Выходные данные:</strong> доступ к токену для последовательных запросов (с жизнью токена 60 минут) или сообщение об ошибке «неверное имя пользователя или пароль».</p>
+                    </li>
+                    <li>
+                         <h4>3. Создание категории продукции</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность создавать категории для продукции.</p>
+                         <ul>
+                            <li><strong>name:</strong> название категории (строка, уникальный, максимум 255 символов).</li>
+                         </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение получения категории или сообщение об ошибке «категория с таким именем уже существует».</p>
+                    </li>
+                    <li>
+                        <h4>4. Создание поставщика</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность создавать поставщиков и присваивать категорию.</p>
+                        <ul>
+                            <li><strong>name:</strong> название поставщика (строка, максимум 55 символов).</li>
+                            <li><strong>email:</strong> адрес электронной почты (опционально).</li>
+                            <li><strong>phone:</strong> номер телефона (строка, максимум 11 символов).</li>
+                            <li><strong>address:</strong> адрес поставщика (строка, максимум 50 символов).</li>
+                            <li><strong>category_id:</strong> ID категории, к которой относится поставщик (целое число).</li>
+                        </ul>
+                        <p><strong>Выходные данные:</strong> Подтверждение получения поставщика.</p>
+                    </li>
+                    <li>
+                        <h4>5. Создание продукта</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность создавать продукты и присваивать категорию и поставщика каждого продукта.</p>
+                        <ul>
+                            <li><strong>name:</strong> название продукта (строка, максимум 25 символов).</li>
+                            <li><strong>manufacturer:</strong> производитель продукта (строка, максимум 25 символов).</li>
+                            <li><strong>price:</strong> цена товара (х.хх).</li>
+                            <li><strong>description:</strong> описание товара (опционально).</li>
+                            <li><strong>category_id:</strong> ID категории продукта (целое число).</li>
+                            <li><strong>supplier_id:</strong> ID поставщика продукта (целое число).</li>
+                        </ul>
+                          <p><strong>Выходные данные:</strong> Подтверждение получения продукта или сообщение об ошибке.</p>
+                    </li>
+                    <li>
+                         <h4>6. Получение списка продуктов</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать все свои продукты.</p>
+                        <p><strong>Выходные данные:</strong> Список объектов продуктов с их данными.</p>
+                    </li>
+                    <li>
+                       <h4>7. Получение продукта по ID</h4>
+                       <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать информацию об конкретном продукте по его идентификатору.</p>
+                        <ul>
+                           <li><strong>product_id:</strong> ID продукта (целое число).</li>
+                        </ul>
+                       <p><strong>Выходные данные:</strong> Объект продукта с его данными или сообщение об ошибке, если продукт не найден.</p>
+                    </li>
+                    <li>
+                        <h4>8. Получение категорий</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать товары для всех своих категорий.</p>
+                         <p><strong>Выходные данные:</strong> Список категорий с их данными.</p>
+                    </li>
+                    <li>
+                        <h4>9. Получение категории по ID</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать информацию о конкретной категории по ее идентификатору.</p>
+                       <ul>
+                           <li><strong>category_id:</strong> ID категории (целое число).</li>
+                       </ul>
+                        <p><strong>Выходные данные:</strong> Категория объекта с ее данными или сообщение об ошибке, если категория не найдена.</p>
+                    </li>
+                     <li>
+                       <h4>10. Получение списка поставщиков</h4>
+                       <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать список всех своих поставщиков.</p>
+                        <p><strong>Выходные данные:</strong> Список объектов поставщиков с их данными.</p>
+                     </li>
+                    <li>
+                         <h4>11. Получение идентификатора поставщика</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность получать информацию о конкретном поставщике по его идентификатору.</p>
+                        <ul>
+                             <li><strong>supplier_id:</strong> ID поставщика (целое число).</li>
+                         </ul>
+                          <p><strong>Выходные данные:</strong> Объект поставщика с его данными или сообщение об ошибке, если поставщик не найден.</p>
+                     </li>
+                     <li>
+                       <h4>12. Обновление продукта</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность обновлять информацию о продукте.</p>
+                        <ul>
+                            <li><strong>product_id:</strong> ID продукта (целое число).</li>
+                        </ul>
+                         <p><strong>По получения обновления продукта или сообщение об ошибке.</p>
+                     </li>
+                     <li>
+                         <h4>13. Обновление поставщика</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность обновлять информацию о поставщике.</p>
+                        <ul>
+                            <li><strong>supplier_id:</strong> ID поставщика (целое число).</li>
+                        </ul>
+                        <p><strong>Поля для обновлений:</strong></p>
+                         <ul>
+                             <li>name</li>
+                             <li>email</li>
+                             <li>phone</li>
+                             <li>address</li>
+                             <li>category_id</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение получения обновления поставщика или сообщение об ошибке.</p>
+                    </li>
+                    <li>
+                       <h4>14. Обновление категории</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность обновлять информацию о категории.</p>
+                        <ul>
+                             <li><strong>category_id:</strong> ID категории (целое число).</li>
+                       </ul>
+                        <p><strong>Поля для обновлений:</strong></p>
+                        <ul>
+                           <li>name</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение получения обновления категории или сообщение об ошибке.</p>
+                   </li>
+                   <li>
+                         <h4>15. Обновление продавца</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность обновлять свою информацию.</p>
+                         <p><strong>Поля для обновлений:</strong></p>
+                         <ul>
+                            <li>Name</li>
+                             <li>email</li>
+                          </ul>
+                          <p><strong>Выходные данные:</strong> Подтверждение получения обновления информации о продавце или сообщение о необходимости.</p>
+                   </li>
+                     <li>
+                         <h4>16. Удаление продукта</h4>
+                        <p><strong>Функциональность:</strong> Продавец должен иметь возможность удалить продукт по идентификатору.</p>
+                        <ul>
+                            <li><strong>product_id:</strong> ID продукта (целое число).</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение удаления продукта или сообщение об ошибке.</p>
+                     </li>
+                     <li>
+                         <h4>17. Удаление поставщика</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность удалить поставщика по идентификатору.</p>
+                         <ul>
+                            <li><strong>supplier_id:</strong> ID поставщика (целое число).</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение удаления поставщика или сообщение об ошибке.</p>
+                    </li>
+                     <li>
+                        <h4>18. Удаление категории</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность удалить категорию по идентификатору.</p>
+                         <ul>
+                            <li><strong>category_id:</strong> ID категории (целое число).</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение удаления категории или сообщение об ошибке.</p>
+                     </li>
+                     <li>
+                        <h4>19. Удаление продавца</h4>
+                         <p><strong>Функциональность:</strong> Продавец должен иметь возможность удалить свой идентификатор.</p>
+                         <ul>
+                            <li><strong>seller_id:</strong> ID продавца (целое число).</li>
+                        </ul>
+                         <p><strong>Выходные данные:</strong> Подтверждение удаления продавца или сообщение об ошибке.</p>
+                    </li>
+                    <li>
+                         <h4>Общие требования</h4>
+                         <ul>
+                            <li>
+                                <h5>1) Связь с продавцом</h5>
+                                <p>Все создаваемые объекты (продукты, категории, поставщики) должны быть связаны с продавцом через поле seller_id. Это гарантирует, что каждый продавец может управлять только собственными данными.</p>
+                            </li>
+                             <li>
+                                <h5>2) Интеграция Swagger с базой данных</h5>
+                                  <p>Пользовательский интерфейс Swagger должен быть интегрирован в приложение для удобного API тестирования. Все манипуляции с эндпоинтами должны осуществляться на основе данных, которые позволяют пользователям видеть изменения в первый момент и проверять корректность работы API.</p>
+                             </li>
+                          </ul>
+                     </li>
+                </ul>
+            </div>
+        </div>
+<!-- Майнд-карта -->
+<div class="collapsible-container">
+    <div class="collapsible-header" onclick="toggleCollapsible('mindmap-api')">
+        <span>Майнд-карта FastAPI</span>
+        <i class="arrow down" id="mindmap-api-arrow"></i>
+    </div>
+    <div class="collapsible-content" id="mindmap-api">
+        <div class="collapsible-container">
+            <div class="collapsible-header" onclick="toggleCollapsible('download-options')">
+                <span>Скачать</span>
+                <i class="arrow down" id="download-options-arrow"></i>
+            </div>
+            <div class="collapsible-content" id="download-options">
+                <div>
+                    <a href="/static/img/gallery/12.png" download="mindmap_full.png">
+                        Скачать майнд-карту (.png)
+                    </a>
+                </div>
+                <div>
+                  <a href="/static/img/gallery/API управления категориями и продуктами.xmind" download="your_mindmap.xmind">
+                    Скачать майнд-карту (.xmind)
+                  </a>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Чек-лист -->
+<div class="collapsible-container">
+    <div class="collapsible-header" onclick="toggleCollapsible('checklist')">
+        <span>Чек-лист</span>
+        <i class="arrow down" id="checklist-arrow"></i>
+    </div>
+    <div class="collapsible-content" id="checklist">
+        <table class="checklist-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Заголовок</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Регистрация продавца
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешная регистрация с уникальным именем пользователя и электронной почтой.</li>
+                                    <li>Проверка, что пароль соответствует требованиям (содержит нижний и верхний регистр, цифры).</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка регистрации с уже занятым именем пользователя.</li>
+                                    <li>Попытка регистрации с уже занятым адресом электронной почты.</li>
+                                    <li>Попытка регистрации с паролем, не соответствующим требованиям (например, менее 8 символов, без цифр).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Авторизация продавца
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешная авторизация с правильным именем пользователя и паролем.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка авторизации с неверным именем пользователя.</li>
+                                    <li>Попытка авторизации с неверным паролем.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                         <select class="status-select" onchange="updateStatus(this)">
+                             <option value="в_работе">В работе</option>
+                             <option value="выполнен">Выполнен</option>
+                             <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                   <td>3</td>
+                    <td>Создание категории продукции
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                   <li>Успешное создание категории с уникальным названием.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                   <li>Попытка создания категории с уже существующим названием.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                 </tr>
+                 <tr>
+                   <td>4</td>
+                    <td>Создание поставщика
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное создание поставщика с корректными данными.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                     <li>Попытка создания поставщика с пустым обязательным полем (например, название).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Создание продукта
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное создание продукта с корректными данными.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка создания продукта с пустым обязательным полем (например, название).</li>
+                                    <li>Попытка создания продукта с неверным category_id или supplier_id.</li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </td>
+                    <td>
+                       <select class="status-select" onchange="updateStatus(this)">
+                           <option value="в_работе">В работе</option>
+                           <option value="выполнен">Выполнен</option>
+                           <option value="не_прошел">Не прошел</option>
+                       </select>
+                   </td>
+                </tr>
+                <tr>
+                   <td>6</td>
+                   <td>Получение списка продуктов
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                      <li>Успешное получение списка продуктов.</li>
+                                  </ul>
+                              </li>
+                              <li>Негативные тесты:
+                                  <ul style="list-style-type: disc;">
+                                      <li>Проверка, что список пуст, если у продавца нет продуктов.</li>
+                                  </ul>
+                             </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Получение продукта по ID
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                       <li>Успешное получение продукта по корректному product_id.</li>
+                                  </ul>
+                             </li>
+                             <li>Негативные тесты:
+                                 <ul style="list-style-type: disc;">
+                                      <li>Попытка получения продукта по несуществующему product_id.</li>
+                                 </ul>
+                             </li>
+                         </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                             <option value="в_работе">В работе</option>
+                             <option value="выполнен">Выполнен</option>
+                             <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                     <td>8</td>
+                     <td>Получение категорий
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                 <ul style="list-style-type: disc;">
+                                      <li>Успешное получение списка категорий.</li>
+                                 </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Проверка, что список пуст, если у продавца нет категорий.</li>
+                                </ul>
+                            </li>
+                         </ul>
+                     </td>
+                     <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                         </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Получение категории по ID
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                 <ul style="list-style-type: disc;">
+                                     <li>Успешное получение категории по корректному category_id.</li>
+                                 </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка получения категории по несуществующему category_id.</li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </td>
+                     <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                           <option value="в_работе">В работе</option>
+                           <option value="выполнен">Выполнен</option>
+                           <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                     <td>10</td>
+                     <td>Получение списка поставщиков
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                      <li>Успешное получение списка поставщиков.</li>
+                                  </ul>
+                             </li>
+                             <li>Негативные тесты:
+                                 <ul style="list-style-type: disc;">
+                                      <li>Проверка, что список пуст, если у продавца нет поставщиков.</li>
+                                 </ul>
+                             </li>
+                          </ul>
+                    </td>
+                     <td>
+                         <select class="status-select" onchange="updateStatus(this)">
+                              <option value="в_работе">В работе</option>
+                              <option value="выполнен">Выполнен</option>
+                              <option value="не_прошел">Не прошел</option>
+                         </select>
+                     </td>
+                </tr>
+                <tr>
+                     <td>11</td>
+                     <td>Получение поставщика по ID
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                              <li>Позитивные тесты:
+                                   <ul style="list-style-type: disc;">
+                                       <li>Успешное получение поставщика по корректному supplier_id.</li>
+                                  </ul>
+                              </li>
+                              <li>Негативные тесты:
+                                 <ul style="list-style-type: disc;">
+                                      <li>Попытка получения поставщика по несуществующему supplier_id.</li>
+                                 </ul>
+                             </li>
+                         </ul>
+                     </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                       </select>
+                   </td>
+                </tr>
+                <tr>
+                     <td>12</td>
+                     <td>Обновление продукта
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                       <li>Успешное обновление информации о продукте.</li>
+                                   </ul>
+                             </li>
+                             <li>Негативные тесты:
+                                 <ul style="list-style-type: disc;">
+                                      <li>Попытка обновления продукта с неверным product_id.</li>
+                                      <li>Попытка обновления с пустыми обязательными полями.</li>
+                                 </ul>
+                             </li>
+                         </ul>
+                    </td>
+                     <td>
+                         <select class="status-select" onchange="updateStatus(this)">
+                             <option value="в_работе">В работе</option>
+                             <option value="выполнен">Выполнен</option>
+                             <option value="не_прошел">Не прошел</option>
+                         </select>
+                     </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Обновление поставщика
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное обновление информации о поставщике.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка обновления поставщика с неверным supplier_id.</li>
+                                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </td>
+                   <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                       </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>14</td>
+                    <td>Обновление категории
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                     <li>Успешное  обновление информации о категории.</li>
+                                </ul>
+                            </li>
+                             <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                      <li>Попытка обновления категории с неверным category_id.</li>
+                                     <li>Попытка обновления с пустыми обязательными полями.</li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </td>
+                    <td>
+                       <select class="status-select" onchange="updateStatus(this)">
+                           <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                           <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                 </tr>
+                 <tr>
+                     <td>15</td>
+                     <td>Обновление продавца
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                 <ul style="list-style-type: disc;">
+                                    <li>Успешное обновление информации о продавце.</li>
+                                 </ul>
+                             </li>
+                             <li>Негативные тесты:
+                                 <ul style="list-style-type: disc;">
+                                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                                 </ul>
+                             </li>
+                         </ul>
+                    </td>
+                     <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                           <option value="в_работе">В работе</option>
+                           <option value="выполнен">Выполнен</option>
+                           <option value="не_прошел">Не прошел</option>
+                       </select>
+                     </td>
+                 </tr>
+                 <tr>
+                      <td>16</td>
+                      <td>Удаление продукта
+                          <ul style="list-style-type: none; padding-left: 20px;">
+                              <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                     <li>Успешное удаление продукта по корректному product_id.</li>
+                                  </ul>
+                              </li>
+                             <li>Негативные тесты:
+                                  <ul style="list-style-type: disc;">
+                                      <li>Попытка удаления продукта по несуществующему product_id.</li>
+                                  </ul>
+                             </li>
+                         </ul>
+                      </td>
+                     <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                           <option value="в_работе">В работе</option>
+                           <option value="выполнен">Выполнен</option>
+                           <option value="не_прошел">Не прошел</option>
+                       </select>
+                   </td>
+                </tr>
+                <tr>
+                     <td>17</td>
+                     <td>Удаление поставщика
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                 <ul style="list-style-type: disc;">
+                                    <li>Успешное удаление поставщика по корректному supplier_id.</li>
+                                 </ul>
+                            </li>
+                             <li>Негативные тесты:
+                                  <ul style="list-style-type: disc;">
+                                     <li>Попытка удаления поставщика по несуществующему supplier_id.</li>
+                                 </ul>
+                           </li>
+                         </ul>
+                    </td>
+                    <td>
+                        <select class="status-select" onchange="updateStatus(this)">
+                             <option value="в_работе">В работе</option>
+                             <option value="выполнен">Выполнен</option>
+                             <option value="не_прошел">Не прошел</option>
+                         </select>
+                     </td>
+                </tr>
+                <tr>
+                      <td>18</td>
+                      <td>Удаление категории
+                         <ul style="list-style-type: none; padding-left: 20px;">
+                             <li>Позитивные тесты:
+                                  <ul style="list-style-type: disc;">
+                                      <li>Успешное удаление категории по корректному category_id.</li>
+                                 </ul>
+                             </li>
+                             <li>Негативные тесты:
+                                  <ul style="list-style-type: disc;">
+                                       <li>Попытка удаления категории по несуществующему category_id.</li>
+                                 </ul>
+                             </li>
+                         </ul>
+                     </td>
+                     <td>
+                         <select class="status-select" onchange="updateStatus(this)">
+                              <option value="в_работе">В работе</option>
+                              <option value="выполнен">Выполнен</option>
+                              <option value="не_прошел">Не прошел</option>
+                         </select>
+                    </td>
+                </tr>
+                 <tr>
+                     <td>19</td>
+                     <td>Удаление продавца
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное удаление продавца по корректному seller_id.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                               <ul style="list-style-type: disc;">
+                                    <li>Попытка удаления продавца по несуществующему seller_id.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                     </td>
+                     <td>
+                         <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                     </td>
+                 </tr>
+            </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Тест-кейсы -->
+         <div class="collapsible-container">
+            <div class="collapsible-header" onclick="toggleCollapsible('testcases')">
+                <span>Тест-кейсы</span>
+                <i class="arrow down" id="testcases-arrow"></i>
+            </div>
+            <div class="collapsible-content" id="testcases">
+                 <p>Здесь будут ваши тест-кейсы. Используйте таблицы для структурирования.</p>
+                   <table class="testcase-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 35px;">ID</th>
+                            <th style="width: 100px;">Название</th>
+                            <th style="width: 50px;">Метод</th>
+                            <th style="width: 50px;">URL</th>
+                            <th style="width: 80px;">Предусловие</th>
+                            <th style="width: 120px;">Шаги</th>
+                            <th style="width: 120px;">Ожидаемый результат</th>
+                            <th style="width: 120px;">Данные запроса</th>
+                            <th style="width: 120px;">Результат</th>
+                            <th style="width: 70px;">Код ответа</th>
+                            <th style="width: 70px;">Статус</th>
+                         </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>ТК-1</td>
+                        <td>Успешная регистрация продавца</td>
+                        <td>POST</td>
+                        <td>/sellers/register</td>
+                        <td>Продавец не зарегистрирован.</td>
+                        <td>1. Отправить POST запрос на /sellers/register.
+                            2. В теле запроса передать username, password, name, email.
+                        </td>
+                        <td>Продавец зарегистрирован в системе</td>
+                        <td>
+                            body {"username": seller123,
+                            "password": Password1,
+                            "name": Моника,
+                            "email": monika@example.com}
+                        </td>
+                        <td>Подтверждение успешной регистрации.</td>
+                        <td>200 OK.</td>
+                        <td>
+                            <select>
+                                <option value="в_работе">В работе</option>
+                                <option value="выполнен">Выполнен</option>
+                                <option value="не_прошел">Не прошел</option>
+                            </select>
+                        </td>
+                    <tr>
+                    <td>ТК-2</td>
+                    <td>Регистрация с занятым именем пользователя</td>
+                    <td>POST</td>
+                    <td>/sellers/register</td>
+                    <td>Продавец с таким именем пользователя уже зарегистрирован</td>
+                    <td>1. Отправить POST запрос на /sellers/register.
+                        2. В теле запроса передать занятое username, password, name, email.
+                    </td>
+                    <td>Продавец не зарегистрирован.</td>
+                     <td>
+                       body {"username": "seller123",
+                         "password": "Password1",
+                         "name": "Моника",
+                         "email": "monika1@example.com"}
+                    </td>
+                     <td>Сообщение об ошибке «имя пользователя или адрес электронной почты уже заняты».</td>
+                    <td>400 Bad Request</td>
+                    <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+        <tr>
+            <td>ТК-3</td>
+            <td>Регистрация с занятым адресом электронной почты</td>
+            <td>POST</td>
+            <td>/sellers/register</td>
+            <td>Продавец с таким адресом электронной почты уже зарегистрирован.</td>
+            <td>
+                1. Отправить POST запрос на /sellers/register.
+                2. В теле запроса передать username, password, name, email.
+            </td>
+            <td>Продавец не зарегистрирован.</td>
+            <td>
+                body {"username": "seller",
+                "password": "Password1",
+                "name": "Моника",
+                "email": "monika@example.com"}
+            </td>
+            <td>Сообщение об ошибке «имя пользователя или адрес электронной почты уже заняты».</td>
+            <td>400 Bad Request</td>
+            <td>
+                <select>
+                    <option value="в_работе">В работе</option>
+                    <option value="выполнен">Выполнен</option>
+                    <option value="не_прошел">Не прошел</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ТК-4</td>
+            <td>Регистрация с невалидным паролем (менее 6 символов)</td>
+            <td>POST</td>
+            <td>/sellers/register</td>
+            <td>Продавец не зарегистрирован.</td>
+            <td>
+                1. Отправить POST запрос на /sellers/register.
+                2. В теле запроса передать username, невалидный password, name, email.
+            </td>
+            <td>Продавец не зарегистрирован.</td>
+            <td>
+                body {"username": "seller32",
+                "password": "password1",
+                "name": "Моника",
+                "email": "monika@example.com"}
+            </td>
+            <td>Сообщение об ошибке «Пароль должен содержать не менее 6 символов, включать цифры, верхний и нижний регистр»</td>
+            <td>400 Bad Request</td>
+              <td>
+                <select>
+                    <option value="в_работе">В работе</option>
+                    <option value="выполнен">Выполнен</option>
+                    <option value="не_прошел">Не прошел</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ТК-5</td>
+            <td>Успешная авторизация продавца</td>
+            <td>POST</td>
+            <td>/token</td>
+            <td>Продавец зарегистрирован.</td>
+            <td>
+                1. Отправить POST запрос на /sellers/login.
+                2. В теле запроса передать username и password.
+            </td>
+            <td>Продавец авторизован в системе.</td>
+            <td>
+                body {"username": "seller123",
+                "password": "Password1"}
+            </td>
+            <td>Доступ к токену для последовательных запросов.</td>
+            <td>200 OK</td>
+              <td>
+                <select>
+                    <option value="в_работе">В работе</option>
+                    <option value="выполнен">Выполнен</option>
+                    <option value="не_прошел">Не прошел</option>
+                </select>
+            </td>
+        </tr>
+         <tr>
+            <td>ТК-6</td>
+            <td>Авторизация с невалидным паролем</td>
+            <td>POST</td>
+            <td>/token</td>
+            <td>Продавец зарегистрирован.</td>
+             <td>
+                1. Отправить POST запрос на /token.
+                2. В теле запроса передать username и невалидный password.
+            </td>
+            <td>Продавец не авторизован.</td>
+            <td>
+                body {"username": "seller123",
+                "password": "Password"}
+            </td>
+            <td>Сообщение об ошибке «неверное имя пользователя или пароль».</td>
+            <td>400 Bad Request</td>
+              <td>
+                <select>
+                    <option value="в_работе">В работе</option>
+                    <option value="выполнен">Выполнен</option>
+                    <option value="не_прошел">Не прошел</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+                     <td>ТК-7</td>
+                     <td>Успешное создание категории</td>
+                     <td>POST</td>
+                     <td>/categories/</td>
+                     <td>Продавец авторизован.</td>
+                     <td>1. Отправить POST запрос на /categories/.
+                          2. В теле запроса передать название категории.
+                     </td>
+                     <td>Категория создана.</td>
+                     <td>body {"name": "Молочные продукты"}</td>
+                     <td>Подтверждение получения категории.</td>
+                     <td>200 OK</td>
+                      <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                 </tr>
+                <tr>
+                    <td>ТК-8</td>
+                    <td>Создание категории превышающей 255 символов в названии</td>
+                    <td>POST</td>
+                    <td>/categories/</td>
+                    <td>Продавец авторизован.</td>
+                    <td>1. Отправить POST запрос на /categories/.
+                        2. В теле запроса передать название категории, длинной более 255 символов.
+                    </td>
+                    <td>Категория не создана.</td>
+                    <td>body {"name": "Молочныепродуктынатуральноемолокопастеризованноемолокоцельноемолокообезжиренноемолокосливкисметанайогурттворогсырмягкийсыртвердыйсырплавленыйсыркефирряженкамолочныекоктейлимороженоедесертынаосновемолокамолочныесмесидлядетейивзрослыхвыауепавыукпвапвапкуккк"}</td>
+                    <td>Категория не создана.</td>
+                    <td>400 Bad Request</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                     <td>ТК-9</td>
+                     <td>Проверка длины имени поставщика (56 символов)</td>
+                     <td>POST</td>
+                     <td>/suppliers</td>
+                     <td>Продавец авторизован.</td>
+                     <td>1. Отправить POST запрос на /suppliers.
+                         2. В теле запроса передать название поставщика, длиной 56 символов. email, phone, address, category_id.
+                    </td>
+                    <td>Поставщик не создан.</td>
+                     <td>body {"name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                           "email": "supplier1@example.com",
+                           "phone": "1234567890",
+                           "address": "Улица 1",
+                           "category_id": 1}
+                     </td>
+                    <td>Сообщение об ошибке «название поставщика не должно превышать 55 символов».</td>
+                    <td>400 Bad Request</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                 </tr>
+                <tr>
+                    <td>ТК-10</td>
+                    <td>Создание продукта с отсутствующей категорией</td>
+                    <td>POST</td>
+                    <td>/products</td>
+                    <td>Продавец авторизован.</td>
+                    <td>1. Отправить POST запрос на /products.
+                        2. В теле запроса передать название продукта, производителя, цену, описание, supplier_id и пустой category_id.
+                    </td>
+                     <td>Продукт не создан.</td>
+                     <td>body {"name": "Йогурт", "manufacturer": "Молочный домик", "price": 50.99, "description": "Очень вкусный йогурт", "category_id": null, "supplier_id": 1}
+                    </td>
+                    <td>Сообщение об ошибке «категория продукта обязательна».</td>
+                    <td>400 Bad Request</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>ТК-11</td>
+                    <td>Успешное получение продукта по ID</td>
+                    <td>GET</td>
+                    <td>/products/{product_id}</td>
+                     <td>Продавец авторизован и продукт существует.</td>
+                     <td>1. Отправить GET запрос на /products/{product_id}.
+                         2. Передать существующий product_id.
+                     </td>
+                     <td>Информация о продукте отображается.</td>
+                     <td>{product_id}: 1</td>
+                     <td>Объект продукта с его данными.</td>
+                    <td>200 OK</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ТК-12</td>
+                    <td>Получение продукта по несуществующему ID</td>
+                    <td>GET</td>
+                    <td>/products/{product_id}</td>
+                    <td>Продавец авторизован.</td>
+                    <td>1. Отправить GET запрос на /products/{product_id}. 2. Передать несуществующий product_id.
+                    </td>
+                    <td>Информация о продукте не отображается.</td>
+                    <td>{product_id}: 999</td>
+                    <td>Сообщение об ошибке «продукт не найден»</td>
+                    <td>400 Bad Request</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+               </tr>
+                 <tr>
+                     <td>ТК-13</td>
+                    <td>Успешное получение категории по ID</td>
+                    <td>GET</td>
+                    <td>/categories/{category_id}</td>
+                    <td>Продавец авторизован и категория существует.</td>
+                    <td>1. Отправить GET запрос на /categories/{category_id}.
+                        2. Передать существующий category_id.
+                    </td>
+                    <td>Информация о категории отображается.</td>
+                    <td>{category_id}: 1</td>
+                    <td>Объект категории с ее данными.</td>
+                    <td>200 OK</td>
+                     <td>
+                        <select>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+         </div>
+    </div>
+
+
+<!-- Контейнер для баг-репортов -->
+<div class="collapsible-container">
+    <div class="collapsible-header" onclick="toggleCollapsible('bug-reports')">
+        Баг-репорты
+        <i class="arrow down" id="bug-reports-arrow"></i>
+    </div>
+<div class="collapsible-content" id="bug-reports">
+    <table class="bug-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Заголовок</th>
+                <th>Шаги</th>
+                <th>ОР</th>
+                <th>ФР</th>
+                <th>Фото</th>
+                <th>Приоритет</th>
+                <th>Серьезность</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>При отправке POST-запроса к `/api/products` позволяет создать продукт с пустым именем</td>
+                <td>
+                    1. Отправить POST-запрос на /api/products с данными продукта, где имя продукта пустое.<br>
+                    2. Проверить ответ сервера.
+                </td>
+                <td>Сервер должен вернуть ошибку с сообщением о том, что имя продукта не может быть пустым и статус 400 (Bad Request).</td>
+                <td>Продукт создается без ошибок (код ответа 201).</td>
+                <td><img src="/static/img/bug/br-1.jpg" alt="Скриншот бага 1" class="thumbnail" onclick="showFullSize('/static/img/bug/br-1.jpg')"></td>
+                <td>Высокий</td>
+                <td>Критическая</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>При отправке PUT-запроса к `/api/products/{id}` не обновляются данные продукта</td>
+                <td>
+                    1. Зарегистрироваться как продавец и получить токен аутентификации.<br>
+                    2. Создать продукт, отправив POST-запрос на /api/products.<br>
+                    3. Отправить PUT-запрос на /api/products/{id} с новыми данными продукта и проверить, что изменения не сохраняются.
+                </td>
+                <td>Данные продукта должны быть успешно обновлены, и сервер должен вернуть статус 200 (OK) с обновленными данными.</td>
+                <td>Данные не обновляются (код ответа 200).</td>
+                <td><img src="/static/img/bug/br-2.jpg" alt="Скриншот бага 2" class="thumbnail" onclick="showFullSize('/static/img/bug/br-2.jpg')"></td>
+                <td>Средний</td>
+                <td>Средняя</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>При отправке PUT-запроса к `/api/sellers/{id}` имя пользователя не изменяется</td>
+                <td>
+                    1. Зарегистрироваться как продавец и получить токен аутентификации.<br>
+                    2. Отправить PUT-запрос на эндпоинт для изменения имени пользователя, указав новое имя пользователя в теле запроса.
+                </td>
+                <td>Система должна возвратить ошибку с сообщением о том, что изменение имени пользователя запрещено.</td>
+                <td>Имя пользователя не меняется,но возвращает статус 200.</td>
+                <td><img src="/static/img/bug/br-3.jpg" alt="Скриншот бага 3" class="thumbnail" onclick="showFullSize('/static/img/bug/br-3.jpg')"></td>
+                <td>Низкий</td>
+                <td>Средний</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>При отправке POST-запроса к `/api/register` происходит успешная регистрация с невалидным паролем</td>
+                <td>
+                    1. Отправить POST-запрос на эндпоинт регистрации с паролем, не соответствующим требованиям, например, без верхнего регистра и цифр, или без нижнего регистра и цифр, или без букв, или без цифр.
+                </td>
+                <td>Система должна вернуть ошибку с сообщением о том, что пароль не соответствует требованиям, и не допустить регистрацию.</td>
+                <td>Регистрация проходит успешно с невалидным паролем, возвращая статус 200.</td>
+                <td><img src="/static/img/bug/br-4.jpg" alt="Скриншот бага 4" class="thumbnail" onclick="showFullSize('/static/img/bug/br-4.jpg')"></td>
+                <td>Высокий</td>
+                <td>Критическая</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>При отправке POST-запроса к `/api/suppliers` позволяет создать поставщика с пустым именем</td>
+                <td>
+                    1. Авторизоваться как продавец и получить токен доступа.<br>
+                    2. Отправить POST-запрос на эндпоинт для создания поставщика, указав в теле запроса пустое значение для поля имени поставщика.
+                </td>
+                <td>Система должна вернуть ошибку с сообщением о том, что имя поставщика не может быть пустым, и не создать нового поставщика.</td>
+                <td>Поставщик создается успешно без ошибок, что не должно происходить.</td>
+                <td><img src="/static/img/bug/br-5.jpg" alt="Скриншот бага 5" class="thumbnail" onclick="showFullSize('/static/img/bug/br-5.jpg')"></td>
+                <td>Высокий</td>
+                <td>Критическая</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <!-- Модальное окно для полноразмерного изображения -->
+    <div id="full-image-modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="full-image">
+    </div>
+</div>
+
+
+<!-- Контейнер для отчета о тестировании -->
+<div class="collapsible-container">
+    <div class="collapsible-header" onclick="toggleCollapsible('test-report')">
+        Отчет о тестировании и рекомендации
+        <i class="arrow down" id="test-report-arrow"></i>
+    </div>
+    <div class="collapsible-content" id="test-report">
+<h3>Введение</h3>
+<p>В рамках тестирования API были выявлены критические уязвимости и недостатки в работе системы, которые необходимо устранить для повышения безопасности, стабильности и соответствия спецификациям API.</p>
+
+<h3>Выявленные баги</h3>
+<ul>
+    <li><b>(API) Создание продукта с пустым именем:</b> POST-запрос к `/api/products` позволяет создать продукт с пустым именем, что нарушает валидацию данных. Ожидается ошибка 400 Bad Request.</li>
+    <li><b>(API) Обновление данных продукта не обновляет данные:</b> PUT-запрос запрос к `/api/products/{id}` не сохраняет изменения данных продукта. Ожидается код 200 OK с обновленными данными.</li>
+    <li><b>(API) Изменение поля Username:</b> PUT-запрос к `/api/sellers/{id}` возвращает код 200 OK, но имя пользователя фактически не меняется. Требуется уточнение логики и кодов ответа.</li>
+    <li><b>(API) Регистрация с невалидным паролем:</b> POST-запрос к `/api/register` позволяет зарегистрировать пользователя с паролем, не соответствующим требованиям безопасности. Ожидается ошибка 400 Bad Request.</li>
+    <li><b>(API) Создание поставщика с пустым именем:</b> POST-запрос к `/api/suppliers` позволяет создать поставщика с пустым именем. Ожидается ошибка 400 Bad Request.</li>
+</ul>
+
+<h3>Улучшения продукта</h3>
+<ul>
+    <li><b>(API) Валидация данных:</b> Внедрить строгую валидацию данных на уровне API для всех эндпоинтов, создающих или обновляющих данные (продукты, поставщики, пользователи). Обязательно проверять наличие и формат обязательных полей.</li>
+    <li><b>(API) Безопасность пароля:</b> Реализовать проверку пароля на соответствие требованиям сложности (минимальная длина, наличие символов верхнего и нижнего регистра, цифр и специальных символов) при регистрации и смене пароля. Возвращать ошибки валидации при несоответствии.</li>
+    <li><b>(API) Управление пользователями:</b>
+        <ul>
+            <li><b></b>Уточнить логику эндпоинта для изменения имени пользователя. Если изменение запрещено, возвращать код 403 Forbidden.</li>
+            <li>Ввести аудит лог для действий администраторов.</li>
+        </ul>
+    </li>
+    <li><b>(API) Коды ответа:</b>
+        <ul>
+            <li></b>Исправить коды ответа API в соответствии со спецификацией REST:
+                <ul>
+                    <li>Возвращать 400 Bad Request для невалидных запросов.</li>
+                    <li>Возвращать 404 Not Found для запросов к несуществующим ресурсам.</li>
+                    <li>Возвращать 409 Conflict при попытке создания дубликатов (например, пользователя с уже существующим email).</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Рекомендации</h3>
+<ul>
+    <li><b>(API) Обработка ошибок:</b> Внедрить централизованную систему обработки ошибок API для обеспечения единообразного и информативного ответа клиентам. Включить журналирование ошибок для упрощения отладки.</li>
+</ul>
+
+<h3>Заключение</h3>
+<p>Устранение выявленных уязвимостей и внедрение предложенных улучшений значительно повысят качество, надежность и безопасность API, что положительно скажется на всей системе.</p>
+    </div>
+</div>
+
+        <!-- Контейнер для автоматизации API -->
+        <div class="collapsible-container">
+            <div class="collapsible-header" onclick="toggleCollapsible('api-automation')">
+                Автоматизация API
+                <i class="arrow down" id="api-automation-arrow"></i>
+            </div>
+            <div class="collapsible-content" id="api-automation">
+                <p>Проект автоматизированного тестирования API. В целях экономии Вашего времени продемонстрирована лишь небольшая часть тестов, охватывающих основные API endpoints. Использованы как случайные данные, так и заданные параметры для демонстрации навыков.</p>
+                <a href="https://github.com/Vulpinary/PythonApi">GitHub Repository</a>
+            </div>
+        </div>
+
+    </div>
+
+  <!-- Footer -->
+<footer class="footer-portfolio-banner">
+    <div class="footer-banner-inner">
+        <p>Контакты: <a href="mailto:your@email.com">tkatushka28@mail.ru</a></p>
+        <p>Телефон: +7 (951) 861-24-34</p>
+        <p><a href="tg://resolve?domain=kattger">Telegram: @kattger</a></p>
+        <p>&copy; 2024 Екатерина</p>
+    </div>
+</footer>
+
+<script>
+    function toggleCollapsible(id) {
+        const content = document.getElementById(id);
+        const arrow = document.getElementById(id + "-arrow");
+
+        if (content.classList.contains('active')) {
+            content.classList.remove('active');
+            arrow.classList.remove('up');
+            arrow.classList.add('down');
+        } else {
+            content.classList.add('active');
+                arrow.classList.remove('down');
+                arrow.classList.add('up');
+            }
+    }
+
+function showFullSize(imageSrc) {
+  const modal = document.getElementById("full-image-modal");
+  const modalImg = document.getElementById("full-image");
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+// Закрываем модальное окно при клике на "x"
+const span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  document.getElementById("full-image-modal").style.display = "none";
+}
+
+// Закрываем модальное окно при клике вне изображения
+window.onclick = function(event) {
+  if (event.target == document.getElementById("full-image-modal")) {
+    document.getElementById("full-image-modal").style.display = "none";
+  }
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
