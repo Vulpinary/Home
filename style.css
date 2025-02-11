@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900&display=swap");
+
+/* Общие стили (применяются ко всем устройствам) */
 body {
     font-family: "Roboto", sans-serif;
     font-weight: normal;
     font-style: normal;
     line-height: 1.6;
-    background-color: #f4f4f4; /*  Из последней части */
+    background-color: #f4f4f4;
+    font-size: 16px; /* Default font size, adjust as needed */
 }
 
 .img, a, .button {
@@ -37,7 +41,7 @@ li {
 p {
     font-size: 16px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.6; /* Adjusted for better readability */
     color: #0e0202;
     margin-bottom: 13px;
     font-family: "Roboto", sans-serif;
@@ -47,22 +51,23 @@ h3 {
     font-size: 24px;
 }
 
-.mb-65 { margin-bottom: 67px; }
-.section-padding { padding: 120px 0; }
-.pt-120 { padding-top: 120px; }
-.mb-20px { margin-bottom: 20px; }
-.mb-55 { margin-bottom: 55px; }
-.mb-40 { margin-bottom: 40px; }
-.mb-20 { margin-bottom: 20px; }
-.mb-50 { margin-bottom: 50px; }
-.mb-60 { margin-bottom: 60px; }
+/* Margins and paddings - consider using REM units */
+.mb-65 { margin-bottom: 4.0625rem; } /* 65px / 16px = 4.0625rem */
+.section-padding { padding: 7.5rem 0; } /* 120px / 16px = 7.5rem */
+.pt-120 { padding-top: 7.5rem; }
+.mb-20px { margin-bottom: 1.25rem; }
+.mb-55 { margin-bottom: 3.4375rem; }
+.mb-40 { margin-bottom: 2.5rem; }
+.mb-20 { margin-bottom: 1.25rem; }
+.mb-50 { margin-bottom: 3.125rem; }
+.mb-60 { margin-bottom: 3.75rem; }
 
 .boxed-btn3-line {
     color: #DB9A64;
     display: inline-block;
-    padding: 17px 49px;
+    padding: 1rem 2rem; /* Adjusted padding */
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 1rem; /* Adjusted font size */
     font-weight: 500;
     border: 1px solid #DB9A64;
     border-radius: 0;
@@ -83,37 +88,39 @@ h3 {
 }
 
 .boxed-btn3-line.large-width {
-    width: 220px;
+    width: auto; /* Make it auto to fit content */
+    min-width: 13.75rem; /* Equivalent to 220px */
 }
 
 .section_title h3 {
-    font-size: 36px;
+    font-size: 2.25rem; /* 36px / 16px */
     font-weight: 400;
     color: #0e0202;
     padding-bottom: 0;
 }
 
 .section_title p {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #F91842;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
 
 .section_title h4 {
-    font-size: 22px;
+    font-size: 1.375rem; /* 22px / 16px */
     font-weight: 500;
     color: #0e0202;
-    padding-bottom: 21px;
+    padding-bottom: 1.3125rem;
 }
 
+/* Slider Area */
 .slider_bg_1 {
-    background-image: url(/Home/myapp/static/img/banner/banner.png);
+    background-image: url(../img/banner/banner.png);
 }
 
 .slider_bg_2 {
-    background-image: url(/Home/myapp/static/img/banner/banner_2.png);
+    background-image: url(../img/banner/banner_2.png);
 }
 
 .slider_area {
@@ -122,31 +129,25 @@ h3 {
 }
 
 .slider_area .single_slider {
-    background-size: 100% 100%;
+    background-size: cover; /* Changed to cover */
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .slider_area .single_slider .slider_text {
-    padding: 150px 0; /* Отступы по умолчанию для больших экранов */
-}
-
-@media (max-width: 768px) {
-    .slider_area .single_slider .slider_text {
-        padding: 50px 0; /* Меньшие отступы для маленьких экранов */
-    }
+    padding: 9.375rem 0; /* 150px / 16px */
 }
 
 .slider_area .single_slider .slider_text h3 {
     font-family: "Roboto", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem; /* 60px / 16px */
     text-transform: capitalize;
     font-weight: 400;
-    line-height: 0px;
+    line-height: 1; /* Adjusted */
     color: #7000ff;
-    margin-bottom: 55px;
+    margin-bottom: 3.4375rem; /* 55px / 16px */
     letter-spacing: -1px;
-    padding-right: 700px;
+    padding-right: 0; /* Removed fixed padding */
 }
 
 .slider_area .single_slider .slider_text h3 span {
@@ -154,11 +155,11 @@ h3 {
 }
 
 .slider_area .single_slider .slider_text p {
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px / 16px */
     font-weight: 400;
     color: #F91842;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .slider_area .single_slider .my_img {
@@ -172,76 +173,78 @@ h3 {
     width: 30%;
 }
 
-
+/* Download Area */
 .download_area {
-    padding: 20px 0 90px;
+    padding: 1.25rem 0 5.625rem; /* 20px 0 90px */
     background: #ededed;
 }
 
 .download_area .download_text h3 {
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #0e0202;
-    padding-right: 100px
+    padding-right: 0;
 }
-.download_area .download_text h4 {
 
-    font-size: 20px;
+.download_area .download_text h4 {
+    font-size: 1.25rem;
     color: #0e0202;
-    padding-right: 100px
+    padding-right: 0;
 }
 
 .download_area .download_left {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .download_area .download_left h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #000000;
-    padding-right: 0px
+    padding-right: 0;
 }
+
 .download_area .download_left h5 {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #000000;
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 .download_area .download_left p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #000000;
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 .download_area .download_left .boxed-btn3-line {
-    margin-top: 28px;
+    margin-top: 1.75rem;
 }
 
 .download_area .progress_skills .single_progress {
-    margin-bottom: 33px;
+    margin-bottom: 2.0625rem;
 }
 
 .download_area .progress_skills .single_progress .label {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .download_area .progress_skills .single_progress .label span {
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
     font-weight: 400;
 }
 
 .download_area .progress_skills .single_progress .progress {
-    height: 6px;
+    height: 0.375rem;
     overflow: hidden;
     font-size: 0.75rem;
     background-color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .download_area .progress_skills .single_progress .progress .progress-bar {
     background: #DB9A64;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
+/* Project Details Area */
 .projects_details_area {
     background: #000000;
 }
@@ -252,16 +255,17 @@ h3 {
 
 .projects_details_area .pos_up {
     position: relative;
-    margin-top: -450px;
+    margin-top: -28.125rem;
 }
 
 .projects_details_area .details_info {
-    padding: 60px 0 120px;
+    padding: 3.75rem 0 7.5rem;
 }
 
+/* Gallery Area */
 .gallery_area {
     background: #ededed;
-    padding: 12px 0;
+    padding: 0.75rem 0;
 }
 
 .gallery_area .single_gallery .thumb img {
@@ -269,20 +273,20 @@ h3 {
 }
 
 .gallery_area .single_gallery .gallery_heading {
-    padding: 20px 0;
-    margin: 7px 0 70px;
+    padding: 1.25rem 0;
+    margin: 0.4375rem 0 4.375rem;
 }
 
 .gallery_area .single_gallery .gallery_heading span {
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 0.4375rem;
 }
 
 .gallery_area .single_gallery .gallery_heading h4 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #DB9A64;
     text-decoration: none;
@@ -296,9 +300,10 @@ h3 {
     display: block;
 }
 
+/* Service Area */
 .service_area {
     background: #a3588f;
-    padding: 120px 0 90px;
+    padding: 7.5rem 0 5.625rem;
 }
 
 .service_area.colord_bg {
@@ -307,34 +312,35 @@ h3 {
 
 .service_area .single_service {
     border: 1px solid #6B4B40;
-    padding: 45px 30px;
-    margin-bottom: 30px;
+    padding: 2.8125rem 1.875rem;
+    margin-bottom: 1.875rem;
 }
 
 .service_area .single_service h3 {
     color: #330000;
-    margin: 22px 0 11px;
+    margin: 1.375rem 0 0.6875rem;
     font-weight: 400;
 }
 
 .service_area .single_service p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #C9C9C9;
-    line-height: 28px;
+    line-height: 1.75rem;
     margin-bottom: 0;
 }
 
+/* Service Products */
 .service_products {
     background: #000000;
-    padding: 0 0 60px;
+    padding: 0 0 3.75rem;
 }
 
 .service_products .padding_left {
-    padding-left: 68px;
+    padding-left: 4.25rem;
 }
 
 .service_products .service_wrap {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
 }
 
 .service_products .service_wrap .thumb img {
@@ -342,44 +348,46 @@ h3 {
 }
 
 .service_products .service_wrap .service_text {
-    margin: 30px 0;
+    margin: 1.875rem 0;
 }
 
 .service_products .service_wrap .service_text h3 {
     color: #fff;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 400;
 }
 
 .service_products .service_wrap .service_text p {
     color: #C9C9C9;
-    font-size: 16px;
-    line-height: 28px;
-    margin: 30px 0;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin: 1.875rem 0;
 }
 
 .service_products .service_wrap .service_text .boxed-btn3-line {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
+/* Sample Text Area */
 .sample-text-area {
     background: #fff;
-    padding: 100px 0 70px;
+    padding: 6.25rem 0 4.375rem;
 }
 
 .text-heading {
-    margin-bottom: 30px;
-    font-size: 24px;
+    margin-bottom: 1.875rem;
+    font-size: 1.5rem;
 }
 
 b, sup, sub, u, del {
     color: #ff5e13;
 }
 
+/* Banner */
 .banner {
     background-color: #333;
     color: #fff;
-    padding: 50px 0;
+    padding: 3.125rem 0;
     text-align: center;
 }
 
@@ -387,24 +395,27 @@ b, sup, sub, u, del {
     font-size: 3em;
 }
 
+/* Portfolio Container */
 .portfolio-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 30px;
+    gap: 1.25rem;
+    padding: 1.875rem;
 }
 
 .portfolio-item {
-    width: 200px;
-    height: 200px;
+    width: calc(50% - 10px); /* Adjusted for phones to take more space */
+    max-width: 200px;  /* Set maximum width */
+    height: 12.5rem;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     text-align: center;
-    padding: 15px;
+    padding: 0.9375rem;
+    box-sizing: border-box; /* Add this to include padding in width */
 }
 
 .portfolio-item img {
@@ -414,14 +425,15 @@ b, sup, sub, u, del {
 }
 
 .portfolio-item h3 {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-size: 1.2em;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     text-align: center;
 }
 
@@ -429,27 +441,28 @@ footer p {
     margin-bottom: 0;
 }
 
+/* Portfolio Banner */
 .portfolio-banner {
-    background-image: url('/Home/myapp/static/img/banner/3.png');
+    background-image: url('/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 0;
-    color: black
+    padding: 6.25rem 0;
+    color: black;
 }
 
 .footer-portfolio-banner {
-    background-image: url('/Home/myapp/static/img/banner/3.png');
+    background-image: url('/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: left;
-    padding-left: 100px;
-    padding: 100px 5;
+    padding-left: 6.25rem;
+    padding: 6.25rem 0.3125rem;
 }
 
 .footer-portfolio-banner h1 {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .footer-portfolio-banner p {
@@ -457,43 +470,54 @@ footer p {
     color: #330000;
 }
 
+/* Navigation */
 .navigation {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
     background-color: #ac3fb5b0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
     color: yellow;
 }
 
 .navigation a {
     color: #edff00;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 0.9375rem;
 }
 
 .navigation a:hover {
     text-decoration: underline;
 }
 
+/* Slider Area Row */
 .slider_area .single_slider .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;  /* Stack elements vertically */
+    text-align: center; /* Center content */
 }
 
 .slider_text {
     text-align: center;
 }
 
+/* Media Queries */
 @media (max-width: 767px) {
+    body {
+        font-size: 14px; /* Adjust base font size for phones */
+    }
+    h1 {
+        font-size: 2.5em; /* Scale down h1 */
+    }
     .mb-60 {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     .section_title h3 {
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 1.875rem;
+        line-height: 2.25rem;
     }
     .section_title h3 br {
         display: none;
@@ -505,68 +529,130 @@ footer p {
         height: auto;
     }
     .slider_area .single_slider .slider_text {
-        padding: 130px 0;
+        padding: 8.125rem 0;
     }
     .slider_area .single_slider .slider_text h3 {
-        font-size: 30px;
-        line-height: 45px;
-        margin-bottom: 30px;
+        font-size: 1.875rem;
+        line-height: 2.8125rem;
+        margin-bottom: 1.875rem;
     }
     .slider_area .single_slider .slider_text p {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .download_area {
-        padding: 90px 0;
+        padding: 5.625rem 0;
     }
     .download_area .download_text h3 {
-        font-size: 25px;
-        line-height: 40px;
-        margin-bottom: 20px;
+        font-size: 1.5625rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.25rem;
     }
     .projects_details_area .pos_up {
-        margin-top: -130px;
+        margin-top: -8.125rem;
     }
     .projects_details_area .details_info {
-        padding: 30px 0 60px;
+        padding: 1.875rem 0 3.75rem;
     }
     .service_products .padding_left {
         padding-left: 0;
     }
+    .footer-portfolio-banner{
+    padding: 10px;
+    text-align: center; /*Центрируем текст для экранов < 767px*/
+    padding-left: 5px;
+    }
+    .portfolio-item{
+      width: calc(100% - 10px); /*Item takes the whole screen minus margins */
+      max-width: none;/* Remove maximum width limit */
+    }
+    .slider_area .single_slider .slider_text h3 {
+      font-size: 2rem; /* Reduced header size */
+      line-height: 2.5rem;
+    }
+    .navigation{
+    position: static;
+    display: flex;
+    justify-content: space-around;/* Ensure menu items are spaced out */
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+    .navigation a{
+      display: block;/* Display each link on a new line */
+        margin: 5px 0;
+        color: black;
+    }
+     .slider_area .single_slider .my_img {
+        position: static;
+        width: 100%;
+        text-align: center; /* Center images */
+    }
+    .slider_area .single_slider .my_img img {
+        width: 50%;
+    }
+     img {
+    width: 80%;/* Adjusted image width for better mobile view */
 }
 
+}
+
+/* Media Query for Tablets */
 @media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 15px; /* Adjust base font size for Tablets */
+    }
     .mb-60 {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     }
     .section_title h3 {
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 2.25rem;
+        line-height: 2.625rem;
     }
     .slider_area .single_slider {
-        height: 600px;
+        height: 37.5rem;
     }
     .slider_area .single_slider .slider_text h3 {
-        font-size: 54px;
+        font-size: 3.375rem;
     }
     .service_products .padding_left {
         padding-left: 0;
     }
+    .portfolio-item{
+        width: calc(50% - 10px);
+    }
+    .footer-portfolio-banner {
+    padding: 15px;
+    text-align: center; /* Center text */
+}
+    .navigation{
+    position: static;
+    display: flex;
+    justify-content: space-around;/* Ensure menu items are spaced out */
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
 }
 
+/* Media Query for Small Desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
     .slider_area .single_slider .slider_text {
-        padding: 130px 0;
+        padding: 8.125rem 0;
     }
     .slider_area .single_slider .slider_text h3 {
-        font-size: 70px;
+        font-size: 4.375rem;
     }
     .slider_area .single_slider .slider_text p {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .slider_area .single_slider .my_img {
-        width: 40%;
+        width: 25%;
     }
 }
+/* styles.css */
+
 .certificate-grid {
     display: flex;
     flex-wrap: wrap;
