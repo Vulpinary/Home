@@ -2,55 +2,49 @@
 
 
 /* Общие стили (применяются ко всем устройствам) */
+/* Общие стили для адаптивности */
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    font-size: 16px; /* Default font size, adjust as needed */
-}
-
-.img, a, .button {
-    transition: 0.3s;
-}
-
-a, button {
-    color: #1F1F1F;
-    outline: none;
-    text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  font-size: 16px; /* Установите базовый размер шрифта */
 }
 
 h1, h2, h3, h4, h5 {
     font-family: "Roboto", sans-serif;
     color: #f9ff00c4;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: inherit;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
+    text-align: center; /* Центрирование заголовков */
 }
 
 p {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.6; /* Adjusted for better readability */
+    line-height: 1.6; /* Улучшено для читаемости */
     color: #0e0202;
-    margin-bottom: 13px;
+    margin-bottom: 1rem; /*  Используйте rem для лучшей адаптивности */
     font-family: "Roboto", sans-serif;
 }
 
-h3 {
-    font-size: 24px;
+.section-padding {
+    padding: 60px 0; /* Уменьшенные отступы для небольших экранов */
 }
+
+.container {
+    width: 95%; /* Расширен контейнер для небольших экранов */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Добавлен padding для небольших экранов */
+}
+
+img {
+    max-width: 100%; /* Image takes up full width */
+    height: auto; /* Maintain proportions */
+    display: block; /* Removes additional spacing */
+    margin: 0 auto; /* Centers image */
+}
+
 
 /* Margins and paddings - consider using REM units */
 .mb-65 { margin-bottom: 4.0625rem; } /* 65px / 16px = 4.0625rem */
@@ -151,16 +145,17 @@ h3 {
     padding-right: 0; /* Removed fixed padding */
 }
 
-.slider_area .single_slider .slider_text h3 span {
-    color: #000000;
+.slider_area .single_slider .slider_text h3 {
+    font-size: 40px; /* Уменьшите размер текста для меньших экранов */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    padding-right: 0; /* Уберите фиксированное выравнивание */
+    text-align: center; /* Added to align text to the center */
 }
 
 .slider_area .single_slider .slider_text p {
-    font-size: 1.875rem; /* 30px / 16px */
-    font-weight: 400;
-    color: #F91842;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem; /* Уменьшите размер текста для меньших экранов */
+    text-align: center; /* Added to align text to the center */
 }
 
 .slider_area .single_slider .my_img {
@@ -180,16 +175,14 @@ h3 {
     background: #ededed;
 }
 
-.download_area .download_text h3 {
-    font-size: 2.25rem;
-    color: #0e0202;
-    padding-right: 0;
+.download_area .download_text h3,
+.download_area .download_text h4 {
+    padding-right: 0; /* Remove fixed padding */
+    text-align: center; /* Center the text */
 }
 
-.download_area .download_text h4 {
-    font-size: 1.25rem;
-    color: #0e0202;
-    padding-right: 0;
+.download_area .download_left {
+    text-align: center; /* Center content */
 }
 
 .download_area .download_left {
@@ -505,151 +498,80 @@ footer p {
     text-align: center;
 }
 
-/* Media Queries */
+/* Медиа-запросы для адаптации к различным размерам экранов */
+/* Для маленьких экранов (телефоны) */
 @media (max-width: 767px) {
-    body {
-        font-size: 14px; /* Adjust base font size for phones */
+    .section-padding {
+        padding: 40px 0; /* Еще уменьшаем отступы */
     }
-    h1 {
-        font-size: 2.5em; /* Scale down h1 */
+
+    .mb-65 {
+        margin-bottom: 30px; /* Уменьшаем отступы */
     }
-    .mb-60 {
-        margin-bottom: 1.25rem;
-    }
+
     .section_title h3 {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
+        font-size: 28px; /* Уменьшаем размер заголовка */
+        line-height: 1.3;
     }
-    .section_title h3 br {
-        display: none;
-    }
-    .section_title p br {
-        display: none;
-    }
-    .slider_area .single_slider {
-        height: auto;
-    }
+
     .slider_area .single_slider .slider_text {
-        padding: 8.125rem 0;
+        padding: 70px 0; /* Уменьшаем отступы для слайдера */
     }
+
     .slider_area .single_slider .slider_text h3 {
-        font-size: 1.875rem;
-        line-height: 2.8125rem;
-        margin-bottom: 1.875rem;
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
+
     .slider_area .single_slider .slider_text p {
-        font-size: 1rem;
-    }
-    .download_area {
-        padding: 5.625rem 0;
+        font-size: 16px;
     }
     .download_area .download_text h3 {
-        font-size: 1.5625rem;
-        line-height: 2.5rem;
-        margin-bottom: 1.25rem;
+        font-size: 24px; /* Уменьшенный размер шрифта для телефонов */
     }
-    .projects_details_area .pos_up {
-        margin-top: -8.125rem;
+
+    .certificate-item {
+        width: calc(50% - 10px); /* Две колонки сертификатов на маленьких экранах */
     }
-    .projects_details_area .details_info {
-        padding: 1.875rem 0 3.75rem;
-    }
-    .service_products .padding_left {
-        padding-left: 0;
-    }
-    .footer-portfolio-banner{
-    padding: 10px;
-    text-align: center; /*Центрируем текст для экранов < 767px*/
-    padding-left: 5px;
-    }
-    .portfolio-item{
-      width: calc(100% - 10px); /*Item takes the whole screen minus margins */
-      max-width: none;/* Remove maximum width limit */
-    }
-    .slider_area .single_slider .slider_text h3 {
-      font-size: 2rem; /* Reduced header size */
-      line-height: 2.5rem;
-    }
-    .navigation{
-    position: static;
-    display: flex;
-    justify-content: space-around;/* Ensure menu items are spaced out */
-    background-color: transparent;
-    text-align: center;
-    margin-top: 10px;
-    color: black;
-}
-    .navigation a{
-      display: block;/* Display each link on a new line */
-        margin: 5px 0;
-        color: black;
-    }
-     .slider_area .single_slider .my_img {
-        position: static;
-        width: 100%;
-        text-align: center; /* Center images */
-    }
-    .slider_area .single_slider .my_img img {
-        width: 50%;
-    }
-     img {
-    width: 80%;/* Adjusted image width for better mobile view */
-}
+     /* Уменьшаем отступы для телефонов */
+        .footer-portfolio-banner {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+         /* Уменьшаем размер шрифта для адаптивности */
+         .requirements-list li h4 {
+            font-size: 1em;
+        }
 
 }
 
-/* Media Query for Tablets */
+/* Для средних экранов (планшеты) */
 @media (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 15px; /* Adjust base font size for Tablets */
+    .section-padding {
+        padding: 80px 0; /* Немного увеличенные отступы */
     }
-    .mb-60 {
-        margin-bottom: 1.875rem;
-    }
-    .section_title h3 {
-        font-size: 2.25rem;
-        line-height: 2.625rem;
-    }
-    .slider_area .single_slider {
-        height: 37.5rem;
-    }
+
     .slider_area .single_slider .slider_text h3 {
-        font-size: 3.375rem;
+        font-size: 48px;
     }
-    .service_products .padding_left {
-        padding-left: 0;
+
+    .certificate-item {
+        width: calc(33.33% - 10px); /* Три колонки на планшетах */
     }
-    .portfolio-item{
-        width: calc(50% - 10px);
-    }
-    .footer-portfolio-banner {
-    padding: 15px;
-    text-align: center; /* Center text */
-}
-    .navigation{
-    position: static;
-    display: flex;
-    justify-content: space-around;/* Ensure menu items are spaced out */
-    background-color: transparent;
-    text-align: center;
-    margin-top: 10px;
-    color: black;
-}
 }
 
-/* Media Query for Small Desktops */
-@media (min-width: 992px) and (max-width: 1200px) {
+/* Большие экраны (ноутбуки и десктопы) - настройки по умолчанию уже есть */
+@media (min-width: 992px) {
+    .container {
+        width: 90%; /* Возвращаем контейнер к обычному размеру */
+    }
     .slider_area .single_slider .slider_text {
-        padding: 8.125rem 0;
+        padding: 150px 0;
     }
-    .slider_area .single_slider .slider_text h3 {
-        font-size: 4.375rem;
-    }
-    .slider_area .single_slider .slider_text p {
-        font-size: 1rem;
-    }
-    .slider_area .single_slider .my_img {
-        width: 25%;
+    .certificate-item {
+        width: calc(20% - 10px); /* 5 columns on desktop */
     }
 }
 /* styles.css */
