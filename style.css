@@ -116,11 +116,11 @@ h3 {
 
 /* Slider Area */
 .slider_bg_1 {
-    background-image: url(Home/myapp/static/img/banner/banner.png);
+    background-image: url('Home/myapp/static/img/banner/banner.png');
 }
 
 .slider_bg_2 {
-    background-image: url(Home/myapp/static/img/banner/banner_2.png);
+    background-image: url('Home/myapp/static/img/banner/banner_2.png');
 }
 
 .slider_area {
