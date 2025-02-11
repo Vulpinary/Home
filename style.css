@@ -116,11 +116,11 @@ h3 {
 
 /* Slider Area */
 .slider_bg_1 {
-    background-image: url(../img/banner/banner.png);
+    background-image: url(Home/myapp/static/img/banner/banner.png);
 }
 
 .slider_bg_2 {
-    background-image: url(../img/banner/banner_2.png);
+    background-image: url(Home/myapp/static/img/banner/banner_2.png);
 }
 
 .slider_area {
@@ -443,7 +443,7 @@ footer p {
 
 /* Portfolio Banner */
 .portfolio-banner {
-    background-image: url('/static/img/banner/3.png');
+    background-image: url('Home/myapp/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -452,7 +452,7 @@ footer p {
 }
 
 .footer-portfolio-banner {
-    background-image: url('/static/img/banner/3.png');
+    background-image: url('Home/myapp/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: left;
