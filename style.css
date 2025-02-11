@@ -934,3 +934,73 @@ img {
   width: 50%;
 }
 
+
+/* Стили для больших экранов (по умолчанию) */
+.checklist-table, .testcase-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.checklist-table th, .checklist-table td,
+.testcase-table th, .testcase-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.checklist-table th, .testcase-table th {
+    background-color: #f2f2f2;
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 768px) {
+    .checklist-table, .testcase-table {
+        display: block; /* Таблица становится блоком */
+    }
+
+    .checklist-table thead, .testcase-table thead {
+        display: none; /* Скрываем заголовки таблицы */
+    }
+
+    .checklist-table tr, .testcase-table tr {
+        display: block; /* Каждая строка становится блоком */
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .checklist-table td, .testcase-table td {
+        display: block; /* Каждая ячейка становится блоком */
+        text-align: right; /* Выравниваем текст по правому краю */
+        padding-left: 50%; /* Отступ слева для размещения "заголовка" */
+        position: relative;
+    }
+
+    /* Добавляем "заголовки" для каждой ячейки */
+    .checklist-table td:before, .testcase-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        text-align: left;
+        font-weight: bold;
+        content: attr(data-label); /* Получаем текст "заголовка" из атрибута data-label */
+    }
+
+    /* Указываем data-label для каждой ячейки */
+    .checklist-table td:nth-of-type(1):before { content: "№"; }
+    .checklist-table td:nth-of-type(2):before { content: "Заголовок"; }
+    .checklist-table td:nth-of-type(3):before { content: "Статус"; }
+
+   .testcase-table td:nth-of-type(1):before { content: "ID"; }
+    .testcase-table td:nth-of-type(2):before { content: "Название"; }
+    .testcase-table td:nth-of-type(3):before { content: "Метод"; }
+    .testcase-table td:nth-of-type(4):before { content: "URL"; }
+    .testcase-table td:nth-of-type(5):before { content: "Предусловие"; }
+    .testcase-table td:nth-of-type(6):before { content: "Шаги"; }
+    .testcase-table td:nth-of-type(7):before { content: "Ожидаемый результат"; }
+    .testcase-table td:nth-of-type(8):before { content: "Данные запроса"; }
+    .testcase-table td:nth-of-type(9):before { content: "Результат"; }
+    .testcase-table td:nth-of-type(10):before { content: "Код ответа"; }
+    .testcase-table td:nth-of-type(11):before { content: "Статус"; }
+}
