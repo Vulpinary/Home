@@ -444,7 +444,7 @@ footer p {
 
 /* Portfolio Banner */
 .portfolio-banner {
-    background-image: url('Home/myapp/static/img/banner/3.png');
+    background-image: url('/Home/myapp/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -453,7 +453,7 @@ footer p {
 }
 
 .footer-portfolio-banner {
-    background-image: url('Home/myapp/static/img/banner/3.png');
+    background-image: url('/Home/myapp/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
     text-align: left;
