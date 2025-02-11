@@ -445,7 +445,7 @@ footer p {
     background-image: url('/Home/myapp/static/img/banner/3.png');
     background-size: cover;
     background-position: center;
-    text-align: left;
+    text-align: center;
     padding-left: 6.25rem;
     padding: 6.25rem 0.3125rem;
 }
