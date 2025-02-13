@@ -178,7 +178,7 @@ img {
 .download_area .download_text h3,
 .download_area .download_text h4 {
     padding-right: 0; /* Remove fixed padding */
-    text-align: center; /* Center the text */
+    text-align: left; /* Center the text */
 }
 
 .download_area .download_left {
