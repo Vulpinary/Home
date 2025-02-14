@@ -292,91 +292,91 @@
         <table class="checklist-table">
             <thead>
                 <tr>
-          <td data-label="№">1</td>
-          <td data-label="Заголовок">Проверка регистрации</td>
-          <td data-label="Статус">
+                <th>№</th>
+                <th>Заголовок</th>
+                <th>Статус</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Регистрация продавца
-                        <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Успешная регистрация с уникальным именем пользователя и электронной почтой.</li>
-                                    <li>Проверка, что пароль соответствует требованиям (содержит нижний и верхний регистр, цифры).</li>
-                                </ul>
-                            </li>
-                            <li>Негативные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Попытка регистрации с уже занятым именем пользователя.</li>
-                                    <li>Попытка регистрации с уже занятым адресом электронной почты.</li>
-                                    <li>Попытка регистрации с паролем, не соответствующим требованиям (например, менее 8 символов, без цифр).</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                            <option value="в_работе">В работе</option>
-                            <option value="выполнен">Выполнен</option>
-                            <option value="не_прошел">Не прошел</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Авторизация продавца
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Успешная авторизация с правильным именем пользователя и паролем.</li>
-                                </ul>
-                            </li>
-                            <li>Негативные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Попытка авторизации с неверным именем пользователя.</li>
-                                    <li>Попытка авторизации с неверным паролем.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                         <select class="status-select" onchange="updateStatus(this)">
-                             <option value="в_работе">В работе</option>
-                             <option value="выполнен">Выполнен</option>
-                             <option value="не_прошел">Не прошел</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                   <td>3</td>
-                    <td>Создание категории продукции
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                   <li>Успешное создание категории с уникальным названием.</li>
-                                </ul>
-                            </li>
-                            <li>Негативные тесты:
-                                <ul style="list-style-type: disc;">
-                                   <li>Попытка создания категории с уже существующим названием.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                            <option value="в_работе">В работе</option>
-                            <option value="выполнен">Выполнен</option>
-                            <option value="не_прошел">Не прошел</option>
-                        </select>
-                    </td>
+                    <td data-label="№">1</td>
+                <td data-label="Заголовок">Регистрация продавца
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>Позитивные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Успешная регистрация с уникальным именем пользователя и электронной почтой.</li>
+                                <li>Проверка, что пароль соответствует требованиям (содержит нижний и верхний регистр, цифры).</li>
+                            </ul>
+                        </li>
+                        <li>Негативные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Попытка регистрации с уже занятым именем пользователя.</li>
+                                <li>Попытка регистрации с уже занятым адресом электронной почты.</li>
+                                <li>Попытка регистрации с паролем, не соответствующим требованиям (например, менее 8 символов, без цифр).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+                <td data-label="Статус">
+                    <select class="status-select" onchange="updateStatus(this)">
+                        <option value="в_работе">В работе</option>
+                        <option value="выполнен">Выполнен</option>
+                        <option value="не_прошел">Не прошел</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="№">2</td>
+                <td data-label="Заголовок">Авторизация продавца
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>Позитивные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Успешная авторизация с правильным именем пользователя и паролем.</li>
+                            </ul>
+                        </li>
+                        <li>Негативные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Попытка авторизации с неверным именем пользователя.</li>
+                                <li>Попытка авторизации с неверным паролем.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+                <td data-label="Статус">
+                    <select class="status-select" onchange="updateStatus(this)">
+                        <option value="в_работе">В работе</option>
+                        <option value="выполнен">Выполнен</option>
+                        <option value="не_прошел">Не прошел</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="№">3</td>
+                <td data-label="Заголовок">Создание категории продукции
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li>Позитивные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Успешное создание категории с уникальным названием.</li>
+                            </ul>
+                        </li>
+                        <li>Негативные тесты:
+                            <ul style="list-style-type: disc;">
+                                <li>Попытка создания категории с уже существующим названием.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+                <td data-label="Статус">
+                    <select class="status-select" onchange="updateStatus(this)">
+                        <option value="в_работе">В работе</option>
+                        <option value="выполнен">Выполнен</option>
+                        <option value="не_прошел">Не прошел</option>
+                    </select>
+                </td>
                  </tr>
                  <tr>
-                   <td>4</td>
-                    <td>Создание поставщика
+<td data-label="№">4</td>
+                    <td data-label="Заголовок">Создание поставщика
                         <ul style="list-style-type: none; padding-left: 20px;">
                             <li>Позитивные тесты:
                                 <ul style="list-style-type: disc;">
@@ -385,12 +385,12 @@
                             </li>
                             <li>Негативные тесты:
                                 <ul style="list-style-type: disc;">
-                                     <li>Попытка создания поставщика с пустым обязательным полем (например, название).</li>
+                                    <li>Попытка создания поставщика с пустым обязательным полем (например, название).</li>
                                 </ul>
                             </li>
                         </ul>
                     </td>
-                    <td>
+                    <td data-label="Статус">
                         <select class="status-select" onchange="updateStatus(this)">
                             <option value="в_работе">В работе</option>
                             <option value="выполнен">Выполнен</option>
@@ -399,9 +399,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>5</td>
-                    <td>Создание продукта
-                         <ul style="list-style-type: none; padding-left: 20px;">
+                    <td data-label="№">5</td>
+                    <td data-label="Заголовок">Создание продукта
+                        <ul style="list-style-type: none; padding-left: 20px;">
                             <li>Позитивные тесты:
                                 <ul style="list-style-type: disc;">
                                     <li>Успешное создание продукта с корректными данными.</li>
@@ -413,33 +413,9 @@
                                     <li>Попытка создания продукта с неверным category_id или supplier_id.</li>
                                 </ul>
                             </li>
-                         </ul>
-                    </td>
-                    <td>
-                       <select class="status-select" onchange="updateStatus(this)">
-                           <option value="в_работе">В работе</option>
-                           <option value="выполнен">Выполнен</option>
-                           <option value="не_прошел">Не прошел</option>
-                       </select>
-                   </td>
-                </tr>
-                <tr>
-                   <td>6</td>
-                   <td>Получение списка продуктов
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                      <li>Успешное получение списка продуктов.</li>
-                                  </ul>
-                              </li>
-                              <li>Негативные тесты:
-                                  <ul style="list-style-type: disc;">
-                                      <li>Проверка, что список пуст, если у продавца нет продуктов.</li>
-                                  </ul>
-                             </li>
                         </ul>
                     </td>
-                    <td>
+                    <td data-label="Статус">
                         <select class="status-select" onchange="updateStatus(this)">
                             <option value="в_работе">В работе</option>
                             <option value="выполнен">Выполнен</option>
@@ -448,324 +424,343 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>7</td>
-                    <td>Получение продукта по ID
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                       <li>Успешное получение продукта по корректному product_id.</li>
-                                  </ul>
-                             </li>
-                             <li>Негативные тесты:
-                                 <ul style="list-style-type: disc;">
-                                      <li>Попытка получения продукта по несуществующему product_id.</li>
-                                 </ul>
-                             </li>
-                         </ul>
+                    <td data-label="№">6</td>
+                    <td data-label="Заголовок">Получение списка продуктов
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное получение списка продуктов.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Проверка, что список пуст, если у продавца нет продуктов.</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </td>
-                    <td>
+                    <td data-label="Статус">
                         <select class="status-select" onchange="updateStatus(this)">
-                             <option value="в_работе">В работе</option>
-                             <option value="выполнен">Выполнен</option>
-                             <option value="не_прошел">Не прошел</option>
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                     <td>8</td>
-                     <td>Получение категорий
-                         <ul style="list-style-type: none; padding-left: 20px;">
+                    <td data-label="№">7</td>
+                    <td data-label="Заголовок">Получение продукта по ID
+                        <ul style="list-style-type: none; padding-left: 20px;">
                             <li>Позитивные тесты:
-                                 <ul style="list-style-type: disc;">
-                                      <li>Успешное получение списка категорий.</li>
-                                 </ul>
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное получение продукта по корректному product_id.</li>
+                                </ul>
+                            </li>
+                            <li>Негативные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Попытка получения продукта по несуществующему product_id.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td data-label="Статус">
+                        <select class="status-select" onchange="updateStatus(this)">
+                            <option value="в_работе">В работе</option>
+                            <option value="выполнен">Выполнен</option>
+                            <option value="не_прошел">Не прошел</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="№">8</td>
+                    <td data-label="Заголовок">Получение категорий
+                        <ul style="list-style-type: none; padding-left: 20px;">
+                            <li>Позитивные тесты:
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное получение списка категорий.</li>
+                                </ul>
                             </li>
                             <li>Негативные тесты:
                                 <ul style="list-style-type: disc;">
                                     <li>Проверка, что список пуст, если у продавца нет категорий.</li>
                                 </ul>
                             </li>
-                         </ul>
-                     </td>
-                     <td>
+                        </ul>
+                    </td>
+                    <td data-label="Статус">
                         <select class="status-select" onchange="updateStatus(this)">
                             <option value="в_работе">В работе</option>
                             <option value="выполнен">Выполнен</option>
                             <option value="не_прошел">Не прошел</option>
-                         </select>
+                        </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>9</td>
-                    <td>Получение категории по ID
-                         <ul style="list-style-type: none; padding-left: 20px;">
+                    <td data-label="№">9</td>
+                    <td data-label="Заголовок">Получение категории по ID
+                        <ul style="list-style-type: none; padding-left: 20px;">
                             <li>Позитивные тесты:
-                                 <ul style="list-style-type: disc;">
-                                     <li>Успешное получение категории по корректному category_id.</li>
-                                 </ul>
+                                <ul style="list-style-type: disc;">
+                                    <li>Успешное получение категории по корректному category_id.</li>
+                                </ul>
                             </li>
                             <li>Негативные тесты:
                                 <ul style="list-style-type: disc;">
                                     <li>Попытка получения категории по несуществующему category_id.</li>
                                 </ul>
                             </li>
-                         </ul>
-                    </td>
-                     <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                           <option value="в_работе">В работе</option>
-                           <option value="выполнен">Выполнен</option>
-                           <option value="не_прошел">Не прошел</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                     <td>10</td>
-                     <td>Получение списка поставщиков
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                      <li>Успешное получение списка поставщиков.</li>
-                                  </ul>
-                             </li>
-                             <li>Негативные тесты:
-                                 <ul style="list-style-type: disc;">
-                                      <li>Проверка, что список пуст, если у продавца нет поставщиков.</li>
-                                 </ul>
-                             </li>
-                          </ul>
-                    </td>
-                     <td>
-                         <select class="status-select" onchange="updateStatus(this)">
-                              <option value="в_работе">В работе</option>
-                              <option value="выполнен">Выполнен</option>
-                              <option value="не_прошел">Не прошел</option>
-                         </select>
-                     </td>
-                </tr>
-                <tr>
-                     <td>11</td>
-                     <td>Получение поставщика по ID
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                              <li>Позитивные тесты:
-                                   <ul style="list-style-type: disc;">
-                                       <li>Успешное получение поставщика по корректному supplier_id.</li>
-                                  </ul>
-                              </li>
-                              <li>Негативные тесты:
-                                 <ul style="list-style-type: disc;">
-                                      <li>Попытка получения поставщика по несуществующему supplier_id.</li>
-                                 </ul>
-                             </li>
-                         </ul>
-                     </td>
-                    <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                            <option value="в_работе">В работе</option>
-                            <option value="выполнен">Выполнен</option>
-                            <option value="не_прошел">Не прошел</option>
-                       </select>
-                   </td>
-                </tr>
-                <tr>
-                     <td>12</td>
-                     <td>Обновление продукта
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                       <li>Успешное обновление информации о продукте.</li>
-                                   </ul>
-                             </li>
-                             <li>Негативные тесты:
-                                 <ul style="list-style-type: disc;">
-                                      <li>Попытка обновления продукта с неверным product_id.</li>
-                                      <li>Попытка обновления с пустыми обязательными полями.</li>
-                                 </ul>
-                             </li>
-                         </ul>
-                    </td>
-                     <td>
-                         <select class="status-select" onchange="updateStatus(this)">
-                             <option value="в_работе">В работе</option>
-                             <option value="выполнен">Выполнен</option>
-                             <option value="не_прошел">Не прошел</option>
-                         </select>
-                     </td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Обновление поставщика
-                        <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Успешное обновление информации о поставщике.</li>
-                                </ul>
-                            </li>
-                            <li>Негативные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Попытка обновления поставщика с неверным supplier_id.</li>
-                                    <li>Попытка обновления с пустыми обязательными полями.</li>
-                                </ul>
-                            </li>
-                       </ul>
-                    </td>
-                   <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                            <option value="в_работе">В работе</option>
-                            <option value="выполнен">Выполнен</option>
-                            <option value="не_прошел">Не прошел</option>
-                       </select>
-                    </td>
-                </tr>
-                 <tr>
-                    <td>14</td>
-                    <td>Обновление категории
-                        <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                     <li>Успешное  обновление информации о категории.</li>
-                                </ul>
-                            </li>
-                             <li>Негативные тесты:
-                                <ul style="list-style-type: disc;">
-                                      <li>Попытка обновления категории с неверным category_id.</li>
-                                     <li>Попытка обновления с пустыми обязательными полями.</li>
-                                </ul>
-                            </li>
-                       </ul>
-                    </td>
-                    <td>
-                       <select class="status-select" onchange="updateStatus(this)">
-                           <option value="в_работе">В работе</option>
-                            <option value="выполнен">Выполнен</option>
-                           <option value="не_прошел">Не прошел</option>
-                        </select>
-                    </td>
-                 </tr>
-                 <tr>
-                     <td>15</td>
-                     <td>Обновление продавца
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                 <ul style="list-style-type: disc;">
-                                    <li>Успешное обновление информации о продавце.</li>
-                                 </ul>
-                             </li>
-                             <li>Негативные тесты:
-                                 <ul style="list-style-type: disc;">
-                                    <li>Попытка обновления с пустыми обязательными полями.</li>
-                                 </ul>
-                             </li>
-                         </ul>
-                    </td>
-                     <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                           <option value="в_работе">В работе</option>
-                           <option value="выполнен">Выполнен</option>
-                           <option value="не_прошел">Не прошел</option>
-                       </select>
-                     </td>
-                 </tr>
-                 <tr>
-                      <td>16</td>
-                      <td>Удаление продукта
-                          <ul style="list-style-type: none; padding-left: 20px;">
-                              <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                     <li>Успешное удаление продукта по корректному product_id.</li>
-                                  </ul>
-                              </li>
-                             <li>Негативные тесты:
-                                  <ul style="list-style-type: disc;">
-                                      <li>Попытка удаления продукта по несуществующему product_id.</li>
-                                  </ul>
-                             </li>
-                         </ul>
-                      </td>
-                     <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                           <option value="в_работе">В работе</option>
-                           <option value="выполнен">Выполнен</option>
-                           <option value="не_прошел">Не прошел</option>
-                       </select>
-                   </td>
-                </tr>
-                <tr>
-                     <td>17</td>
-                     <td>Удаление поставщика
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                 <ul style="list-style-type: disc;">
-                                    <li>Успешное удаление поставщика по корректному supplier_id.</li>
-                                 </ul>
-                            </li>
-                             <li>Негативные тесты:
-                                  <ul style="list-style-type: disc;">
-                                     <li>Попытка удаления поставщика по несуществующему supplier_id.</li>
-                                 </ul>
-                           </li>
-                         </ul>
-                    </td>
-                    <td>
-                        <select class="status-select" onchange="updateStatus(this)">
-                             <option value="в_работе">В работе</option>
-                             <option value="выполнен">Выполнен</option>
-                             <option value="не_прошел">Не прошел</option>
-                         </select>
-                     </td>
-                </tr>
-                <tr>
-                      <td>18</td>
-                      <td>Удаление категории
-                         <ul style="list-style-type: none; padding-left: 20px;">
-                             <li>Позитивные тесты:
-                                  <ul style="list-style-type: disc;">
-                                      <li>Успешное удаление категории по корректному category_id.</li>
-                                 </ul>
-                             </li>
-                             <li>Негативные тесты:
-                                  <ul style="list-style-type: disc;">
-                                       <li>Попытка удаления категории по несуществующему category_id.</li>
-                                 </ul>
-                             </li>
-                         </ul>
-                     </td>
-                     <td>
-                         <select class="status-select" onchange="updateStatus(this)">
-                              <option value="в_работе">В работе</option>
-                              <option value="выполнен">Выполнен</option>
-                              <option value="не_прошел">Не прошел</option>
-                         </select>
-                    </td>
-                </tr>
-                 <tr>
-                     <td>19</td>
-                     <td>Удаление продавца
-                        <ul style="list-style-type: none; padding-left: 20px;">
-                            <li>Позитивные тесты:
-                                <ul style="list-style-type: disc;">
-                                    <li>Успешное удаление продавца по корректному seller_id.</li>
-                                </ul>
-                            </li>
-                            <li>Негативные тесты:
-                               <ul style="list-style-type: disc;">
-                                    <li>Попытка удаления продавца по несуществующему seller_id.</li>
-                                </ul>
-                            </li>
                         </ul>
-                     </td>
-                     <td>
-                         <select class="status-select" onchange="updateStatus(this)">
+                    </td>
+                    <td data-label="Статус">
+                        <select class="status-select" onchange="updateStatus(this)">
                             <option value="в_работе">В работе</option>
                             <option value="выполнен">Выполнен</option>
                             <option value="не_прошел">Не прошел</option>
                         </select>
-                     </td>
-                 </tr>
-            </tbody>
-                </table>
-            </div>
-        </div>
+                    </td>
+                </tr>
+                      <tr>
+    <td data-label="№">10</td>
+    <td data-label="Заголовок">Получение списка поставщиков
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное получение списка поставщиков.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Проверка, что список пуст, если у продавца нет поставщиков.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">11</td>
+    <td data-label="Заголовок">Получение поставщика по ID
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное получение поставщика по корректному supplier_id.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка получения поставщика по несуществующему supplier_id.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">12</td>
+    <td data-label="Заголовок">Обновление продукта
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное обновление информации о продукте.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка обновления продукта с неверным product_id.</li>
+                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">13</td>
+    <td data-label="Заголовок">Обновление поставщика
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное обновление информации о поставщике.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка обновления поставщика с неверным supplier_id.</li>
+                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">14</td>
+    <td data-label="Заголовок">Обновление категории
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное  обновление информации о категории.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка обновления категории с неверным category_id.</li>
+                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+                         <td data-label="№">15</td>
+    <td data-label="Заголовок">Обновление продавца
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное обновление информации о продавце.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка обновления с пустыми обязательными полями.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">16</td>
+    <td data-label="Заголовок">Удаление продукта
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное удаление продукта по корректному product_id.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка удаления продукта по несуществующему product_id.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">17</td>
+    <td data-label="Заголовок">Удаление поставщика
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное удаление поставщика по корректному supplier_id.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка удаления поставщика по несуществующему supplier_id.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">18</td>
+    <td data-label="Заголовок">Удаление категории
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное удаление категории по корректному category_id.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка удаления категории по несуществующему category_id.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td data-label="№">19</td>
+    <td data-label="Заголовок">Удаление продавца
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li>Позитивные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Успешное удаление продавца по корректному seller_id.</li>
+                </ul>
+            </li>
+            <li>Негативные тесты:
+                <ul style="list-style-type: disc;">
+                    <li>Попытка удаления продавца по несуществующему seller_id.</li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td data-label="Статус">
+        <select class="status-select" onchange="updateStatus(this)">
+            <option value="в_работе">В работе</option>
+            <option value="выполнен">Выполнен</option>
+            <option value="не_прошел">Не прошел</option>
+        </select>
+    </td>
+</tr>
 
         <!-- Тест-кейсы -->
          <div class="collapsible-container">
