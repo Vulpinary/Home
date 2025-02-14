@@ -1039,3 +1039,33 @@ checklist-table, .testcase-table, .bug-table {
     .bug-table td:nth-of-type(7):before { content: "Приоритет"; }
     .bug-table td:nth-of-type(8):before { content: "Серьезность"; }
 }
+
+.collapsible-content {
+    padding: 15px;
+    display: none;
+    line-height: 1.6;
+}
+
+/* Style adjustments to make the "Requirements" section more compact */
+.collapsible-content#requirements {
+    font-size: 14px; /* Reduce font size */
+    line-height: 1.4; /* Reduce line height */
+}
+
+.collapsible-content#requirements h4 {
+    font-size: 16px; /* Reduce heading font size */
+    margin-bottom: 5px; /* Reduce margin below heading */
+}
+
+.collapsible-content#requirements p {
+    margin-bottom: 8px; /* Reduce margin below paragraphs */
+}
+
+.collapsible-content#requirements ul {
+    margin-bottom: 8px; /* Reduce margin below lists */
+    padding-left: 20px; /* Maintain indentation */
+}
+
+.collapsible-content#requirements li {
+    margin-bottom: 3px; /* Reduce margin below list items */
+}
