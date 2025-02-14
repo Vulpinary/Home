@@ -953,100 +953,38 @@ img {
 }
 
 /* Медиа-запрос для маленьких экранов */
-/* Media query for small screens */
 @media (max-width: 768px) {
-    .checklist-table, .testcase-table {
-        display: block;
-    }
-
-    .checklist-table thead, .testcase-table thead {
-        display: none;
-    }
-
-    .checklist-table tr, .testcase-table tr {
-        display: block;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-    }
-
-    .checklist-table td, .testcase-table td {
-        display: block;
-        text-align: left; /* Align text to the left */
-        position: relative;
-        padding-left: 0; /* Remove padding */
-    }
-
-    /* Style the header before */
-    .checklist-table td:before, .testcase-table td:before {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        content: attr(data-label); /* Get text "header" from the data-label attribute */
-        width: 100%; /* The header now takes up the full width */
-    }
-
-    /* Define data-label for each cell */
-    .checklist-table td:nth-of-type(1):before { content: "№"; }
-    .checklist-table td:nth-of-type(2):before { content: "Заголовок"; }
-    .checklist-table td:nth-of-type(3):before { content: "Статус"; }
-
-    .testcase-table td:nth-of-type(1):before { content: "ID"; }
-    .testcase-table td:nth-of-type(2):before { content: "Название"; }
-    .testcase-table td:nth-of-type(3):before { content: "Метод"; }
-    .testcase-table td:nth-of-type(4):before { content: "URL"; }
-    .testcase-table td:nth-of-type(5):before { content: "Предусловие"; }
-    .testcase-table td:nth-of-type(6):before { content: "Шаги"; }
-    .testcase-table td:nth-of-type(7):before { content: "Ожидаемый результат"; }
-    .testcase-table td:nth-of-type(8):before { content: "Данные запроса"; }
-    .testcase-table td:nth-of-type(9):before { content: "Результат"; }
-    .testcase-table td:nth-of-type(10):before { content: "Код ответа"; }
-    .testcase-table td:nth-of-type(11):before { content: "Статус"; }
+/* Labels for the data */
+.checklist-table td:before, .testcase-table td:before, .bug-table td:before {
+    position: relative;      /* Respect text flow */
+    display: block;             /* Display each header on one line */
+    font-weight: bold;           /* Strong emphasizing font */
+    margin-bottom: 5px;         /* Maintain spacing */
+    content: attr(data-label);   /* Fetch header text */
 }
 
-/* Style for bug report table on small screens */
-@media (max-width: 768px) {
-    .bug-table {
-        display: block;
-    }
+/* List header contents */
+.checklist-table td:nth-of-type(1):before { content: "№"; }
+.checklist-table td:nth-of-type(2):before { content: "Заголовок"; }
+.checklist-table td:nth-of-type(3):before { content: "Статус"; }
 
-    .bug-table thead {
-        display: none;
-    }
+.testcase-table td:nth-of-type(1):before { content: "ID"; }
+.testcase-table td:nth-of-type(2):before { content: "Название"; }
+.testcase-table td:nth-of-type(3):before { content: "Метод"; }
+.testcase-table td:nth-of-type(4):before { content: "URL"; }
+.testcase-table td:nth-of-type(5):before { content: "Предусловие"; }
+.testcase-table td:nth-of-type(6):before { content: "Шаги"; }
+.testcase-table td:nth-of-type(7):before { content: "Ожидаемый результат"; }
+.testcase-table td:nth-of-type(8):before { content: "Данные запроса"; }
+.testcase-table td:nth-of-type(9):before { content: "Результат"; }
+.testcase-table td:nth-of-type(10):before { content: "Код ответа"; }
+.testcase-table td:nth-of-type(11):before { content: "Статус"; }
 
-    .bug-table tr {
-        display: block;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-    }
-
-    .bug-table td {
-        display: block;
-        padding: 0.5em;
-        text-align: left;
-    }
-
-    /* Add header before each cell */
-    .bug-table td:before {
-        content: attr(data-label);
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
-
-    /* Specific header names for bug table */
-    .bug-table td:nth-of-type(1):before { content: "№"; }
-    .bug-table td:nth-of-type(2):before { content: "Заголовок"; }
-    .bug-table td:nth-of-type(3):before { content: "Шаги"; }
-    .bug-table td:nth-of-type(4):before { content: "ОР (Ожидаемый Результат)"; }
-    .bug-table td:nth-of-type(5):before { content: "ФР (Фактический Результат)"; }
-    .bug-table td:nth-of-type(6):before { content: "Фото"; }
-    .bug-table td:nth-of-type(7):before { content: "Приоритет"; }
-    .bug-table td:nth-of-type(8):before { content: "Серьезность"; }
-
-    .bug-table img.thumbnail {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0.5em 0;
-    }
-}
+.bug-table td:nth-of-type(1):before { content: "№"; }
+.bug-table td:nth-of-type(2):before { content: "Заголовок"; }
+.bug-table td:nth-of-type(3):before { content: "Шаги"; }
+.bug-table td:nth-of-type(4):before { content: "ОР"; }
+.bug-table td:nth-of-type(5):before { content: "ФР"; }
+.bug-table td:nth-of-type(6):before { content: "Фото"; }
+.bug-table td:nth-of-type(7):before { content: "Приоритет"; }
+.bug-table td:nth-of-type(8):before { content: "Серьезность"; }
