@@ -1040,32 +1040,37 @@ checklist-table, .testcase-table, .bug-table {
     .bug-table td:nth-of-type(8):before { content: "Серьезность"; }
 }
 
+/* The style of the collapsible content */
 .collapsible-content {
-    padding: 15px;
-    display: none;
-    line-height: 1.6;
+    padding: 15px; /* The interior gap */
+    display: none; /* Don't display by default */
+    line-height: 1.6; /* Set space */
 }
 
-/* Style adjustments to make the "Requirements" section more compact */
+/* Reduce font size and margins to compact layout */
 .collapsible-content#requirements {
-    font-size: 14px; /* Reduce font size */
-    line-height: 1.4; /* Reduce line height */
+    font-size: 13px; /* More compact font size */
+    line-height: 1.3; /* Tightly set lines */
 }
 
+/* List description text style */
 .collapsible-content#requirements h4 {
-    font-size: 16px; /* Reduce heading font size */
-    margin-bottom: 5px; /* Reduce margin below heading */
+    font-size: 15px; /* More compact text size */
+    margin-bottom: 4px; /* Shorter margin below */
 }
 
+/* Shortening paragraph gaps */
 .collapsible-content#requirements p {
-    margin-bottom: 8px; /* Reduce margin below paragraphs */
+    margin-bottom: 6px; /* Narrow paragraph bottoms */
 }
 
+/* Smaller item list with indentation adjustment */
 .collapsible-content#requirements ul {
-    margin-bottom: 8px; /* Reduce margin below lists */
-    padding-left: 20px; /* Maintain indentation */
+    margin-bottom: 6px; /* Reduce distance before list */
+    padding-left: 18px; /* Adjust indentation */
 }
 
+/* List items with smaller size and indentation */
 .collapsible-content#requirements li {
-    margin-bottom: 3px; /* Reduce margin below list items */
+    margin-bottom: 2px; /* Less height per bullet */
 }
