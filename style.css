@@ -1074,3 +1074,28 @@ checklist-table, .testcase-table, .bug-table {
 .collapsible-content#requirements li {
     margin-bottom: 2px; /* Less height per bullet */
 }
+/* Style to the navigation bar */
+.navigation {
+    text-align: center;     /* Centrally aligned navigation */
+    margin-top: 10px;      /* A spacing of 10 pixels above */
+}
+
+.navigation a {
+    display: inline-block;    /* Display inline with block-like properties */
+    margin: 0 10px;        /* Maintain 10px spacing on left/right */
+    color: #333;           /* Text to dark gray */
+    text-decoration: none;   /* Disable text underline */
+}
+
+/* Media query for small screens to rearrange */
+@media (max-width: 768px) {
+    .navigation {
+        text-align: center;     /* Align all items */
+    }
+
+         .navigation a {
+        display: block;         /* Elements vertically arranged */
+        margin: 5px auto;      /* A 5-pixel margin and centered */
+        width: fit-content;     /* Adapt width */
+    }
+}
