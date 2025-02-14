@@ -953,45 +953,44 @@ img {
 }
 
 /* Медиа-запрос для маленьких экранов */
+/* Media query for small screens */
 @media (max-width: 768px) {
     .checklist-table, .testcase-table {
-        display: block; /* Таблица становится блоком */
+        display: block;
     }
 
     .checklist-table thead, .testcase-table thead {
-        display: none; /* Скрываем заголовки таблицы */
+        display: none;
     }
 
     .checklist-table tr, .testcase-table tr {
-        display: block; /* Каждая строка становится блоком */
+        display: block;
         margin-bottom: 10px;
         border: 1px solid #ddd;
     }
 
     .checklist-table td, .testcase-table td {
-        display: block; /* Каждая ячейка становится блоком */
-        text-align: left; /* Выравниваем текст по левому краю */
-        padding-left: 0; /* Убираем отступ слева */
+        display: block;
+        text-align: left; /* Align text to the left */
         position: relative;
+        padding-left: 0; /* Remove padding */
     }
 
-    /* Добавляем "заголовки" для каждой ячейки */
+    /* Style the header before */
     .checklist-table td:before, .testcase-table td:before {
-        display: block; /* Отображаем перед элементом как блок */
-        position: static; /* Удаляем абсолютное позиционирование */
-        width: auto; /* Занимает всю доступную ширину */
-        padding: 5px 0; /* Добавляем отступы сверху и снизу */
-        text-align: left; /* Выравниваем текст заголовка по левому краю */
+        display: block;
         font-weight: bold;
-        content: attr(data-label); /* Получаем текст "заголовка" из атрибута data-label */
+        margin-bottom: 5px;
+        content: attr(data-label); /* Get text "header" from the data-label attribute */
+        width: 100%; /* The header now takes up the full width */
     }
 
-    /* Указываем data-label для каждой ячейки */
+    /* Define data-label for each cell */
     .checklist-table td:nth-of-type(1):before { content: "№"; }
     .checklist-table td:nth-of-type(2):before { content: "Заголовок"; }
     .checklist-table td:nth-of-type(3):before { content: "Статус"; }
 
-   .testcase-table td:nth-of-type(1):before { content: "ID"; }
+    .testcase-table td:nth-of-type(1):before { content: "ID"; }
     .testcase-table td:nth-of-type(2):before { content: "Название"; }
     .testcase-table td:nth-of-type(3):before { content: "Метод"; }
     .testcase-table td:nth-of-type(4):before { content: "URL"; }
