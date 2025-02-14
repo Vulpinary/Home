@@ -375,7 +375,9 @@ template {
     display: none!important
 }
 
-.h1,
+.h1 {
+    text-align: centr;
+}
 .h2,
 .h3,
 .h4,
@@ -393,7 +395,7 @@ h6 {
     line-height: 25px;
     color: #0e0202;
     padding-right: 200px;
-    text-align: centr;
+    text-align: left;
 }
 
 .h1,
