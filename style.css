@@ -953,39 +953,67 @@ img {
 }
 
 /* Медиа-запрос для маленьких экранов */
-@media (max-width: 768px) {
-@media (max-width: 768px) {
-    .checklist-table, .testcase-table {
-        display: block;
-    }
+checklist-table, .testcase-table, .bug-table {
+    font-family: Arial, sans-serif;  /* Overall font */
+    font-size: 14px;             /* Default text size */
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
-    .checklist-table thead, .testcase-table thead {
-        display: none;
-    }
+/* Set up head-specific styles to give titles focus */
+.checklist-table th, .testcase-table th, .bug-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;             /* Header font size */
+    font-weight: normal;           /* Default font */
+    font-style: normal;           /* Default font */
+}
 
-    .checklist-table tr, .testcase-table tr {
-        display: block;
+/* Apply to data cells */
+.checklist-table td, .testcase-table td, .bug-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-weight: normal;           /* Default font */
+    font-style: normal;           /* Default font */
+}
+
+/* Make adjustments for small screens */
+@media (max-width: 768px) {
+    .checklist-table, .testcase-table, .bug-table {
+        display: block; /* Stack the table on small screens */
+    }
+    .checklist-table thead, .testcase-table thead, .bug-table thead {
+        display: none; /* Hide headers for stacked table */
+    }
+    .checklist-table tr, .testcase-table tr, .bug-table tr {
+        display: block; /* Transform each row into a block */
         margin-bottom: 10px;
         border: 1px solid #ddd;
     }
-
-    .checklist-table td, .testcase-table td {
-        display: block;
-        text-align: left; /* Align text to the left */
+    .checklist-table td, .testcase-table td, .bug-table td {
+        display: block; /* Display table cells as blocks */
+        text-align: left;
+        padding-left: 0; /* Remove default left-padding */
         position: relative;
-        padding-left: 0; /* Remove padding */
+        font-weight: normal;           /* Default font */
+        font-style: normal;           /* Default font */
     }
 
-    /* Style the header before */
-    .checklist-table td:before, .testcase-table td:before {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        content: attr(data-label); /* Get text "header" from the data-label attribute */
-        width: 100%; /* The header now takes up the full width */
+    /* Labels for the data */
+    .checklist-table td:before, .testcase-table td:before, .bug-table td:before {
+        position: relative;      /* Respect text flow */
+        display: block;             /* Display each header on one line */
+        font-weight: normal;           /* Strong emphasizing font */
+        font-style: normal;           /* Strong emphasizing font */
+        margin-bottom: 5px;         /* Maintain spacing */
+        content: attr(data-label);   /* Fetch header text */
     }
 
-    /* Define data-label for each cell */
+    /* List header contents */
     .checklist-table td:nth-of-type(1):before { content: "№"; }
     .checklist-table td:nth-of-type(2):before { content: "Заголовок"; }
     .checklist-table td:nth-of-type(3):before { content: "Статус"; }
@@ -1001,51 +1029,13 @@ img {
     .testcase-table td:nth-of-type(9):before { content: "Результат"; }
     .testcase-table td:nth-of-type(10):before { content: "Код ответа"; }
     .testcase-table td:nth-of-type(11):before { content: "Статус"; }
-}
 
-@media (max-width: 768px) {
-    .bug-table {
-        display: block;
-    }
-
-    .bug-table thead {
-        display: none;
-    }
-
-    .bug-table tr {
-        display: block;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-    }
-
-    .bug-table td {
-        display: block;
-        padding: 0.5em;
-        text-align: left;
-    }
-
-    /* Add header before each cell */
-    .bug-table td:before {
-        content: attr(data-label);
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
-
-    /* Specific header names for bug table */
     .bug-table td:nth-of-type(1):before { content: "№"; }
     .bug-table td:nth-of-type(2):before { content: "Заголовок"; }
     .bug-table td:nth-of-type(3):before { content: "Шаги"; }
-    .bug-table td:nth-of-type(4):before { content: "ОР (Ожидаемый Результат)"; }
-    .bug-table td:nth-of-type(5):before { content: "ФР (Фактический Результат)"; }
+    .bug-table td:nth-of-type(4):before { content: "ОР"; }
+    .bug-table td:nth-of-type(5):before { content: "ФР"; }
     .bug-table td:nth-of-type(6):before { content: "Фото"; }
     .bug-table td:nth-of-type(7):before { content: "Приоритет"; }
     .bug-table td:nth-of-type(8):before { content: "Серьезность"; }
-
-    .bug-table img.thumbnail {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0.5em 0;
-    }
 }
