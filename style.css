@@ -1081,6 +1081,8 @@ checklist-table, .testcase-table, .bug-table {
     .navigation {
         text-align: center; 
         position: relative;
+        top: 0rem;
+        right: 0rem;
     }
 
          .navigation a {
