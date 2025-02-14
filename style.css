@@ -1079,7 +1079,8 @@ checklist-table, .testcase-table, .bug-table {
 /* Media query for small screens to rearrange */
 @media (max-width: 768px) {
     .navigation {
-        text-align: center;     /* Align all items */
+        text-align: center; 
+        position: relative;
     }
 
          .navigation a {
